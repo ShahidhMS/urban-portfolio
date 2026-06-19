@@ -1,0 +1,828 @@
+{
+  "profile": {
+    "name": "Shahidh Saliheen",
+    "title": "Urban Planner | GIS & Spatial Analytics Specialist",
+    "subtitle": "GIS & Remote Sensing Enthusiast | Spatial Data Analyst",
+    "introduction": "Building Sustainable Cities Through Data, Technology, and Planning.",
+    "profileImage": "/profile.jpg",
+    "cvUrl": "#",
+    "email": "msshahidh30701@gmail.com",
+    "phone": "+94 76 390 0362",
+    "bio": "I am Shahidh Saliheen, an Urban Planning graduate specializing in Geographic Information Systems (GIS), Remote Sensing, Spatial Analytics, and urban data science. My work focuses on integrating geospatial technologies with planning principles to better understand urban systems, evaluate spatial patterns, and develop evidence-based solutions for contemporary urban challenges.\n\nWith experience in spatial analysis, land-use planning, urban growth assessment, site suitability modeling, and geospatial visualization, I am passionate about transforming complex spatial data into actionable insights that support sustainable development and informed decision-making. My approach combines analytical thinking, technological innovation, and planning expertise to address issues related to urban resilience, environmental sustainability, mobility, and equitable community development.",
+    "academicBackground": "Bachelor of Science in Urban Planning with specialized expertise in Geographic Information Systems (GIS), Remote Sensing, and Spatial Analytics. Strong foundation in spatial modeling, urban analysis, research methodologies, and evidence-based planning practices for sustainable urban development.",
+    "careerGoals": "To advance the integration of geospatial intelligence, urban analytics, and planning practice in shaping smarter, more resilient, and data-informed cities. I aspire to contribute to innovative planning solutions that address climate adaptation, sustainable growth, and the evolving needs of urban communities.",
+    "philosophy": "Effective urban planning goes beyond maps, regulations, and infrastructure. It requires understanding the dynamic relationship between people, place, and data to create communities that are sustainable, resilient, and inclusive for future generations.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/shahidh-saliheen",
+      "github": "https://github.com/ShahidhMS"
+    }
+  },
+  "stats": {
+    "projectsCount": "12+",
+    "mappedArea": "4,250 km²",
+    "codingHours": "100+",
+    "dataPoints": "1.2M+",
+    "accuracyScore": "96.4%"
+  },
+  "skills": {
+    "urbanPlanning": [
+      {
+        "name": "Urban Design",
+        "level": 95
+      },
+      {
+        "name": "Land Use Planning",
+        "level": 95
+      },
+      {
+        "name": "Transportation Planning",
+        "level": 90
+      },
+      {
+        "name": "Regional Planning",
+        "level": 90
+      },
+      {
+        "name": "Sustainable Development",
+        "level": 95
+      },
+      {
+        "name": "Environmental Planning",
+        "level": 80
+      }
+    ],
+    "gisRemoteSensing": [
+      {
+        "name": "ArcGIS Pro",
+        "level": 95
+      },
+      {
+        "name": "QGIS",
+        "level": 90
+      },
+      {
+        "name": "Google Earth Engine",
+        "level": 85
+      },
+      {
+        "name": "Remote Sensing Analysis",
+        "level": 85
+      },
+      {
+        "name": "Spatial Modeling",
+        "level": 90
+      },
+      {
+        "name": "Cartography",
+        "level": 95
+      },
+      {
+        "name": "Geospatial Databases",
+        "level": 80
+      },
+      {
+        "name": "Pix4Dmapper",
+        "level": 80
+      },
+      {
+        "name": "3D Survey",
+        "level": 80
+      }
+    ],
+    "programmingDesign": [
+      {
+        "name": "Python (GeoPandas, Pandas)",
+        "level": 85
+      },
+      {
+        "name": "R (Spatial Stats)",
+        "level": 75
+      },
+      {
+        "name": "SQL (PostGIS)",
+        "level": 65
+      },
+      {
+        "name": "AutoCAD",
+        "level": 90
+      },
+      {
+        "name": "AutoCAD Civil 3D",
+        "level": 80
+      },
+      {
+        "name": "SketchUp",
+        "level": 90
+      },
+      {
+        "name": "Enscape",
+        "level": 85
+      },
+      {
+        "name": "Adobe Photoshop",
+        "level": 75
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "pettah-heritage-regeneration",
+      "title": "Revitalizing Pettah: Activating Heritage Through a Structured Market Spine",
+      "category": "Urban Design & Regeneration",
+      "description": "A heritage-led urban regeneration proposal focused on the Old Town Hall and Market Precinct in Pettah, Colombo. The project aimed to revitalize one of Colombo's most historically significant urban districts by integrating heritage conservation, informal economic activities, pedestrian mobility, and public realm improvements. Spatial analysis and urban design principles were applied to create a vibrant, accessible, and economically sustainable urban environment.",
+      "tools": [
+        "ArcGIS Pro",
+        "QGIS",
+        "AutoCAD",
+        "SketchUp",
+        "Enscape",
+        "Adobe Photoshop"
+      ],
+      "outcomes": [
+        "Identified critical pedestrian conflict zones and accessibility bottlenecks.",
+        "Developed a pedestrian-oriented market spine connecting key heritage assets.",
+        "Proposed adaptive reuse strategies for heritage structures.",
+        "Prepared phased implementation strategies and PPP-based funding mechanisms.",
+        "Produced masterplans, urban design guidelines, and 3D visualizations."
+      ],
+      "githubLink": "",
+      "reportLink": "/projects/pettah_heritage_report.pdf",
+      "location": {
+        "name": "Pettah, Colombo, Sri Lanka",
+        "lat": 6.936,
+        "lng": 79.85
+      },
+      "stats": {
+        "areaMapped": "2 km²",
+        "timeRange": "Jan – May 2026",
+        "datasets": "Building footprints, Road network, Pedestrian surveys, Land-use data, Heritage inventory"
+      },
+      "imageUrl": "/projects/pettah_heritage_cover.jpg",
+      "panelLink": "/projects/pettah_heritage_panel.jpg",
+      "galleryLinks": [
+        { "id": 7, "label": "Pettah Project Gallery" }
+      ]
+    },
+    {
+      "id": "night-time-food-culture",
+      "title": "Night-Time Food Culture Developments in Colombo",
+      "category": "Urban Research",
+      "description": "An individually supervised research project investigating the spatial, social, and economic dynamics of emerging night-time food activity clusters within Colombo. The study explored location determinants, accessibility patterns, user behavior, and growth drivers of night-time urban economies.",
+      "tools": [
+        "ArcGIS Pro",
+        "R",
+        "SPSS",
+        "Geographically Weighted Regression",
+        "Spatial Cluster Analysis"
+      ],
+      "outcomes": [
+        "Identified significant factors influencing night-time food cluster formation.",
+        "Mapped emerging food activity corridors across Colombo.",
+        "Developed evidence-based planning recommendations for urban night economies.",
+        "Generated spatial models explaining growth patterns and accessibility relationships."
+      ],
+      "githubLink": "",
+      "reportLink": "",
+      "location": {
+        "name": "Colombo Metropolitan Area, Sri Lanka",
+        "lat": 6.9271,
+        "lng": 79.8612
+      },
+      "stats": {
+        "areaMapped": "Colombo Metro",
+        "timeRange": "Sep 2025 – Jan 2026",
+        "datasets": "Primary survey data, Business location data, Transport network, Census data"
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "nuwara-eliya-heritage-planning",
+      "title": "Heritage Development Planning Framework for Nuwara Eliya",
+      "category": "Heritage Planning",
+      "description": "Developed a heritage-sensitive planning framework balancing conservation requirements with future urban growth needs. The project utilized GIS and Multi-Criteria Decision Making (MCDM) techniques to identify conservation-sensitive areas and development opportunity zones.",
+      "tools": [
+        "ArcGIS Pro",
+        "QGIS",
+        "MCDM Analysis",
+        "Weighted Overlay Analysis",
+        "Remote Sensing"
+      ],
+      "outcomes": [
+        "Mapped heritage-sensitive zones requiring strict conservation.",
+        "Identified suitable development opportunity areas.",
+        "Developed planning guidelines for sustainable heritage management.",
+        "Produced strategic policy recommendations for long-term conservation."
+      ],
+      "githubLink": "",
+      "reportLink": "/projects/nuwara_eliya_heritage_report.pdf",
+      "location": {
+        "name": "Nuwara Eliya, Sri Lanka",
+        "lat": 6.9497,
+        "lng": 80.7891
+      },
+      "stats": {
+        "areaMapped": "13 km²",
+        "timeRange": "Jan – Mar 2025",
+        "datasets": "Land-use maps, Heritage inventories, Road networks, DEM data"
+      },
+      "imageUrl": "/projects/nuwara_eliya_heritage_cover.png"
+    },
+    {
+      "id": "groundwater-recharge-potential",
+      "title": "Groundwater Recharge Potential Analysis",
+      "category": "Remote Sensing",
+      "description": "Evaluated and mapped groundwater recharge potential zones in the Kurunegala District, Sri Lanka, to support sustainable water resource management. The analysis utilizes a Multi-Criteria Decision Analysis (MCDA) framework, integrating Landsat 8 satellite classification, soil hydrology groups, composite Curve Numbers (CN), and topographic slope/elevation parameters.",
+      "tools": [
+        "ArcMap",
+        "Landsat 8 OLI",
+        "SCS Hydrological Modeling",
+        "Topographic Analysis"
+      ],
+      "outcomes": [
+        "Identified groundwater replenishment zones ranging from 'Very High' (steeped in dense vegetation) to 'Very Low' suitability.",
+        "Performed Landsat 8 LULC classification mapping agricultural, built-up, and water bodies.",
+        "Modelled weighted composite Curve Numbers (CN) to estimate surface runoff rates.",
+        "Provided recommendations directly targeting infiltration pits and vegetation preservation."
+      ],
+      "githubLink": "",
+      "reportLink": "/projects/groundwater-recharge-report.pdf",
+      "location": {
+        "name": "Kurunegala, Sri Lanka",
+        "lat": 7.4863,
+        "lng": 80.3647
+      },
+      "stats": {
+        "areaMapped": "4,816 km²",
+        "timeRange": "2022 Analysis",
+        "datasets": "Landsat 8, Soil Maps, SRTM DEM"
+      },
+      "imageUrl": "/projects/groundwater_recharge_cover.jpg",
+      "galleryLinks": [
+        { "id": 8, "label": "Groundwater Analysis Maps" }
+      ]
+    },
+    {
+      "id": "human-elephant-conflict",
+      "title": "Integrating Human–Elephant Conflict into Sri Lanka's National Physical Plan 2050",
+      "category": "Regional Planning",
+      "description": "This studio project investigated Human–Elephant Conflict (HEC) as a national-scale planning challenge and evaluated how effectively Sri Lanka's National Physical Plan (NPP) 2050 addresses ecological and wildlife conservation concerns. The project aimed to move beyond conventional conflict mitigation measures by integrating HEC considerations directly into the country's spatial development framework.\n\nThe study analyzed existing Human–Elephant Conflict patterns, elephant home ranges, conservation zones, settlement distribution, infrastructure corridors, and future development proposals outlined in the National Physical Plan. Through GIS-based spatial analysis, conflict-sensitive areas were identified and compared against proposed urban growth centers, transportation infrastructure, and settlement expansion zones.\n\nBased on the findings, the project developed an alternative national spatial structure that incorporates Human–Elephant Conflict as a core planning parameter. This included proposing revisions to urban hierarchy systems, identifying alternative development nodes, recommending controlled settlement expansion strategies, and modifying selected infrastructure proposals that could potentially intensify human–wildlife conflicts. The project culminated in a policy brief and planning framework promoting sustainable coexistence between human settlements and elephant habitats while maintaining national development objectives.",
+      "tools": [
+        "ArcGIS Pro",
+        "QGIS",
+        "Remote Sensing & Spatial Analysis",
+        "Spatial Overlay Analysis",
+        "GIS-Based Risk Mapping",
+        "Policy Analysis",
+        "Cartographic Visualization",
+        "National Physical Planning Framework Evaluation"
+      ],
+      "outcomes": [
+        "Identified high Human–Elephant Conflict zones that overlap with proposed development corridors and growth centers in the National Physical Plan.",
+        "Assessed elephant carrying capacity and demonstrated that proposed conservation zones could support projected elephant populations under appropriate protection measures.",
+        "Developed a revised national sensitivity framework integrating ecological vulnerability, settlement patterns, and development potential.",
+        "Proposed modifications to urban hierarchy, settlement growth strategies, and selected infrastructure projects to reduce future Human–Elephant Conflict and habitat fragmentation.",
+        "Produced policy recommendations advocating the legal protection and gazetting of conservation zones and the incorporation of wildlife-sensitive planning principles into national development policy."
+      ],
+      "githubLink": "",
+      "reportLink": "/projects/human-elephant-conflict-report.pdf",
+      "location": {
+        "name": "Sri Lanka (National Scale Study)",
+        "lat": 7.8731,
+        "lng": 80.7718
+      },
+      "stats": {
+        "areaMapped": "Entire territory of Sri Lanka (~65,610 km²)",
+        "timeRange": "2024–2025 Academic Studio Project",
+        "datasets": "HEC Incident Data, Elephant Home Range, NPP 2050 Spatial Framework, Conservation Area Boundaries, Settlement Data, Urban Hierarchy, Transportation Network, Land Use/Cover, Environmental Sensitivity Layers, Population/Development Projections"
+      },
+      "imageUrl": "/projects/human_elephant_conflict_cover.png",
+      "galleryLinks": [
+        { "id": 9, "label": "HEC Map Gallery" }
+      ]
+    },
+    {
+      "id": "traffic-analysis-yolo",
+      "title": "Traffic Analysis Using YOLO Object Detection",
+      "category": "Urban Analytics",
+      "description": "Developed an AI-driven traffic analysis workflow using YOLO object detection to automate vehicle classification, counting, and traffic monitoring from video datasets. The project integrated machine learning outputs with urban transportation analysis.",
+      "tools": [
+        "Python",
+        "YOLO",
+        "SQL Database",
+        "R Programming",
+        "OpenCV"
+      ],
+      "outcomes": [
+        "Automated vehicle detection and classification.",
+        "Created a structured SQL database for traffic observations.",
+        "Produced traffic pattern visualizations and dashboards.",
+        "Demonstrated the application of AI for evidence-based transport planning."
+      ],
+      "githubLink": "",
+      "reportLink": "/projects/yolo_traffic_sample.mp4",
+      "location": {
+        "name": "Sri Lanka (Pilot Study Location)",
+        "lat": 6.9,
+        "lng": 79.9
+      },
+      "stats": {
+        "areaMapped": "Traffic Corridor",
+        "timeRange": "January 2025",
+        "datasets": "Traffic video footage, SQL database records, Vehicle classification outputs"
+      },
+      "imageUrl": "/projects/yolo_traffic_cover.mp4",
+      "customLink": "https://www.linkedin.com/posts/shahidh-saliheen_deeplearning-yolo-trafficanalytics-activity-7302927149345259522-rZdl?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEeod5wBGes9oH2IBEP2F6tqae72t4FFyPs",
+      "customLinkLabel": "LinkedIn Post"
+    },
+    {
+      "id": "trincomalee-local-plan",
+      "title": "Trincomalee Local Development Plan",
+      "category": "Local Area Planning",
+      "description": "Prepared a development-oriented local plan for the Trincomalee Municipal Council area emphasizing tourism development, public space enhancement, economic activation, and community-oriented growth strategies.",
+      "tools": [
+        "ArcGIS Pro",
+        "QGIS",
+        "AutoCAD",
+        "Spatial Accessibility Analysis"
+      ],
+      "outcomes": [
+        "Identified tourism development corridors.",
+        "Assessed accessibility and land-use suitability.",
+        "Proposed recreation and commercial development zones.",
+        "Developed strategic recommendations for sustainable urban growth."
+      ],
+      "githubLink": "",
+      "reportLink": "/projects/trincomalee_local_plan_report.pdf",
+      "location": {
+        "name": "Trincomalee Municipal Council Area",
+        "lat": 8.5874,
+        "lng": 81.2152
+      },
+      "stats": {
+        "areaMapped": "100 km²",
+        "timeRange": "Jan – Mar 2024",
+        "datasets": "Land-use maps, Road network data, Population data, Tourism assets inventory"
+      },
+      "imageUrl": "/projects/trinco_model_19.png",
+      "galleryLinks": [
+        { "id": 13, "label": "Trincomalee Project Gallery" }
+      ]
+    },
+    {
+      "id": "drone-lidar-survey",
+      "title": "UAV-Based Waste Dump Site Mapping and Volumetric Analysis",
+      "category": "GIS & Surveying",
+      "description": "This project involved processing and analyzing UAV (drone) survey data collected from the Madampitiya Waste Disposal Site to support terrain assessment, waste volume estimation, and spatial monitoring. Waste disposal facilities require accurate and up-to-date information on surface conditions, waste accumulation, and available capacity to support operational planning and environmental management. Traditional survey methods can be time-consuming and resource-intensive, making UAV-based surveying a more efficient solution.\n\nThe project utilized high-resolution drone imagery and georeferenced survey data to develop detailed three-dimensional representations of the site. A photogrammetric workflow was applied to generate dense point clouds, orthomosaics, Digital Surface Models (DSM), and Digital Elevation Models (DEM). Terrain features were extracted and classified to improve surface interpretation, while breaklines, contours, and cross-sections were generated for detailed topographic analysis. Volumetric calculations were then performed to estimate waste accumulation and assess storage capacity within the site.\n\nThis project provided practical experience in drone surveying, photogrammetry, terrain modeling, geospatial analysis, and volumetric assessment using industry-standard software and real-world datasets obtained through the R&D Division of Global GIS (Pvt) Ltd.",
+      "tools": [
+        "3Dsurvey",
+        "Pix4Dmapper",
+        "ArcGIS Pro",
+        "QGIS",
+        "AutoCAD Civil 3D",
+        "GNSS Survey Equipment",
+        "UAV/Drone Survey Data",
+        "Photogrammetric Processing Techniques",
+        "Point Cloud Analysis"
+      ],
+      "outcomes": [
+        "Generated high-density georeferenced point clouds and orthomosaic imagery for detailed site visualization and analysis.",
+        "Developed Digital Elevation Models (DEM) and Digital Surface Models (DSM) to accurately represent terrain conditions and waste accumulation patterns.",
+        "Produced contours, breaklines, and cross-sectional profiles for topographic assessment and engineering applications.",
+        "Performed volumetric calculations to estimate waste dump capacity and support operational monitoring of the disposal site.",
+        "Created GIS-ready datasets and 3D terrain models that improved understanding of site morphology and spatial characteristics."
+      ],
+      "githubLink": "",
+      "reportLink": "",
+      "location": {
+        "name": "Madampitiya Waste Disposal Site, Colombo, Sri Lanka",
+        "lat": 6.9500,
+        "lng": 79.8750
+      },
+      "stats": {
+        "areaMapped": "UAV survey coverage of an active waste disposal facility",
+        "timeRange": "2024 Internship Project",
+        "datasets": "UAV/Drone Aerial Imagery, GNSS Ground Control Data, Dense Point Cloud Data, Orthomosaic Imagery, DSM, DEM, Derived Contours and Breaklines"
+      },
+      "imageUrl": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "badulupitiya-residential-planning",
+      "title": "Badulupitiya Neighborhood Regeneration and Housing Environment Improvement Plan",
+      "category": "Urban Planning",
+      "description": "This project focused on the analysis and regeneration of the Badulupitiya neighborhood within the Badulla Municipal Council area. The study was initiated to investigate the area's housing conditions, environmental degradation, accessibility challenges, and increasing pressure on environmentally sensitive reservation lands. The area was selected due to its unique socio-economic characteristics, including low land values, relatively low-income households, high housing density, environmental issues, and significant differences compared to surrounding residential neighborhoods.\n\nA comprehensive spatial and socio-economic assessment was conducted using GIS-based analysis, field observations, demographic data, and urban service accessibility mapping. The study examined land values, population density, housing density, income levels, service accessibility, historical urban growth patterns, and environmental constraints. Future population growth trends and settlement expansion patterns were also assessed to understand long-term development pressures.\n\nBased on the findings, a neighborhood improvement strategy was developed with two primary objectives:\n\n1. Improving the housing environment and accessibility.\n2. Protecting reservation areas and environmentally sensitive land.\n\nThe planning proposals included upgrading connectivity by converting Athwel Bridge into a motorable bridge connecting Badulupitiya and Andeniya, improving access to Badulla Town, reducing travel time, discouraging illegal activities, and minimizing encroachment into reservation areas. Additional interventions addressed solid waste management, environmental quality improvement, and the creation of community gathering spaces to improve residents' quality of life.",
+      "tools": [
+        "ArcGIS",
+        "QGIS",
+        "Google Earth Pro",
+        "AutoCAD",
+        "Spatial Analysis Techniques",
+        "Population Forecasting",
+        "Accessibility Analysis",
+        "Land Value Analysis",
+        "Housing Density Analysis",
+        "Community Surveys and Field Observations"
+      ],
+      "outcomes": [
+        "Identified Badulupitiya as one of the lowest-income residential communities within Badulla Municipal Council.",
+        "Determined that Badulupitiya has the highest population density among the analyzed GN divisions within the municipal area.",
+        "Found that Badulupitiya possesses one of the lowest land values despite its proximity to urban services and facilities.",
+        "Recorded a housing density of approximately 17 houses per hectare, significantly above the municipal average of 9 houses per hectare.",
+        "Identified critical urban issues including land encroachment, improper waste disposal, inadequate access infrastructure, and construction within reservation areas.",
+        "Developed a neighborhood improvement proposal centered on enhanced accessibility, environmental conservation, and community-focused public space improvements."
+      ],
+      "githubLink": "",
+      "reportLink": "/projects/badulupitiya_report.pdf",
+      "location": {
+        "name": "Badulupitiya, Badulla Municipal Council Area, Sri Lanka",
+        "lat": 6.993,
+        "lng": 81.055
+      },
+      "stats": {
+        "areaMapped": "Badulupitiya GN Division & surrounding neighborhoods",
+        "timeRange": "2023 Studio Project",
+        "datasets": "Population Data, Socio-economic Statistics, Land Value, Housing Density, Population Density, Service Accessibility, Field Survey, Google Earth Historical Imagery, Reservation Area Mapping, Community Observations"
+      },
+      "imageUrl": "/projects/badulupitiya_regeneration_cover.jpg",
+      "galleryLinks": [
+        { "id": 10, "label": "Badulupitiya Project Gallery" }
+      ]
+    },
+    {
+      "id": "bogambara-prison-visualization",
+      "title": "Bogambara Prison Adaptive Reuse Redevelopment Visualization",
+      "category": "Heritage Redevelopment",
+      "description": "This project involved the development of a comprehensive 3D visualization package for the proposed adaptive reuse and redevelopment of the historic Bogambara Prison in Kandy, Sri Lanka. The planning proposal aimed to transform the underutilized heritage site into a multifunctional destination integrating cultural, commercial, recreational, tourism, and educational activities while preserving its architectural and historical significance.\n\nAs a freelance 3D visualization designer, I was responsible for translating the planning and design concepts into detailed digital models and realistic renderings. The work included modeling existing heritage structures, proposed public spaces, cultural marketplaces, museums, restaurants, urban parks, and wellness facilities to support design communication and stakeholder presentations.",
+      "tools": [
+        "SketchUp",
+        "Enscape",
+        "AutoCAD",
+        "Adobe Photoshop",
+        "Architectural Visualization",
+        "Heritage-Sensitive 3D Modeling"
+      ],
+      "outcomes": [
+        "Developed a detailed 3D digital model of approximately 13 acres of heritage redevelopment area.",
+        "Produced high-quality architectural renderings showcasing adaptive reuse strategies for historic prison structures.",
+        "Visualized key development components including cultural markets, heritage museum, urban park, wellness center, and mixed-use public spaces.",
+        "Enhanced stakeholder understanding of the proposed redevelopment through realistic visual communication and presentation graphics.",
+        "Successfully integrated heritage conservation principles with contemporary urban design elements in the visualization outputs."
+      ],
+      "githubLink": "",
+      "reportLink": "",
+      "location": {
+        "name": "Kandy City, Central Province, Sri Lanka",
+        "lat": 7.2906,
+        "lng": 80.6337
+      },
+      "stats": {
+        "areaMapped": "Approximately 13 Acres (5.26 Hectares)",
+        "timeRange": "2025",
+        "datasets": "Architectural Floor Plans, Site Layout Plans, DGP Guidelines, Heritage Conservation Guidelines, Urban Design Concept Plans, Landscape Proposals, Presentation Drawings"
+      },
+      "imageUrl": "/projects/bogambara_en1.png",
+      "galleryLinks": [
+        { "id": 11, "label": "Heritage Redevelopment Gallery" },
+        { "id": 12, "label": "Urban Park Gallery" }
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "id": "pub1",
+      "title": "Mapping Heat Vulnerability: A GIS & Remote Sensing Approach in Rapidly Urbanizing Metros",
+      "type": "Paper",
+      "publisher": "Undergraduate Journal of Urban Studies",
+      "date": "May 2025",
+      "authors": "Sarah Jenkins, Dr. Robert Sterling",
+      "abstract": "Urban heat islands (UHI) disproportionately affect marginalized urban demographics. This research integrates Landsat Land Surface Temperature (LST) extractions with census-derived social vulnerability variables to build a composite Heat Vulnerability Index (HVI). The study outlines targeted intervention areas for green canopy programs.",
+      "link": "#"
+    },
+    {
+      "id": "pub2",
+      "title": "Assisting Transit Equity: Evaluating Active Mobility Connections to Light Rail Lines",
+      "type": "Conference",
+      "publisher": "Annual GIS Association Symposium",
+      "date": "October 2024",
+      "authors": "Sarah Jenkins",
+      "abstract": "Presented network-analysis findings examining sidewalk networks and micro-mobility links feeding transit nodes. Discussed methods for automating route audits using Python and OpenStreetMap data APIs.",
+      "link": "#"
+    },
+    {
+      "id": "pub3",
+      "title": "Zoning for Density: A 3D Spatial Modeling Approach to Mixed-Use Infill Development",
+      "type": "Report",
+      "publisher": "Center for Urban Innovation Working Paper Series",
+      "date": "March 2025",
+      "authors": "Sarah Jenkins, Elena Rostova",
+      "abstract": "Used SketchUp and GIS datasets to model alternative zoning policies. Demonstrates the impact of setback and floor area ratio (FAR) adjustments on walkable neighborhood density.",
+      "link": "#"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 7,
+      "title": "Revitalizing Pettah: Activating Heritage Through a Structured Market Spine",
+      "category": "Urban Design Album",
+      "imageUrl": "/projects/pettah_heritage_cover.jpg",
+      "description": "A complete collection of architectural site designs, 3D renders, and walk-through animations detailing the Old Town Hall and market precinct regeneration project in Pettah.",
+      "type": "Model & Visualization",
+      "mediaGroup": [
+        "/projects/pettah_group_1.png",
+        "/projects/pettah_group_2.png",
+        "/projects/pettah_group_3.png",
+        "/projects/pettah_group_4.png",
+        "/projects/pettah_group_5.png",
+        "/projects/pettah_group_6.png",
+        "/projects/pettah_group_7.png",
+        "/projects/pettah_group_8.png",
+        "/projects/pettah_group_9.png",
+        "/projects/pettah_group_10.png"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Groundwater Recharge Potential Analysis (Kurunegala, Sri Lanka)",
+      "category": "GIS & Remote Sensing Album",
+      "imageUrl": "/projects/land_use_map.jpg",
+      "description": "A collection of cartographic layouts prepared for the groundwater replenishment study in Kurunegala District, including terrain elevation, land use classification, vegetation index, and SCS Curve Number maps.",
+      "type": "Map",
+      "mediaGroup": [
+        "/projects/land_use_map.jpg",
+        "/projects/ndvi_map.jpg",
+        "/projects/scs_curve_number_map.jpg",
+        "/projects/elevation_map.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Integrating Human–Elephant Conflict into Sri Lanka's National Physical Plan 2050",
+      "category": "Regional Planning Album",
+      "imageUrl": "/projects/hec_stra_npp.png",
+      "description": "A collection of strategic maps prepared for the eco-sensitive national planning study, including the strategic physical plan, ecological conservation zones, carrying capacity analysis, and vulnerability indices.",
+      "type": "Map",
+      "mediaGroup": [
+        "/projects/hec_stra_npp.png",
+        "/projects/hec_rec1.png",
+        "/projects/hec_meow.png",
+        "/projects/hec_cons.png",
+        "/projects/hec_cc.png",
+        "/projects/human_elephant_conflict_cover.png"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Badulupitiya Neighborhood Regeneration and Housing Environment Improvement Plan",
+      "category": "Urban Design Album",
+      "imageUrl": "/projects/badulupitiya_regeneration_cover.jpg",
+      "description": "A collection of 3D renders, public park designs, waterfront developments, and connectivity improvements prepared for the Badulupitiya housing improvement plan.",
+      "type": "Model & Visualization",
+      "mediaGroup": [
+        "/projects/badulupitiya_regeneration_cover.jpg",
+        "/projects/badulupitiya_top_view_park.png",
+        "/projects/badulupitiya_2nd_angle_up.png",
+        "/projects/badulupitiya_moto.png",
+        "/projects/badulupitiya_motorable_bridge.png",
+        "/projects/badulupitiya_new_athwel.png",
+        "/projects/badulupitiya_overview_up.png",
+        "/projects/badulupitiya_design_4.jpg",
+        "/projects/badulupitiya_design_1.jpg",
+        "/projects/badulupitiya_design_2.jpg",
+        "/projects/badulupitiya_design_3.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Bogambara Prison: Heritage Redevelopment Proposal",
+      "category": "Urban Design Album",
+      "imageUrl": "/projects/bogambara_mid.png",
+      "description": "A collection of architectural renderings, floor layouts, and 3D SketchUp models visualizing the main adaptive reuse design of Kandy's historic Bogambara Prison.",
+      "type": "Model & Visualization",
+      "mediaGroup": [
+        "/projects/bogambara_mid.png",
+        "/projects/bogambara_mid_1.png",
+        "/projects/bogambara_ground_floor_bv.png",
+        "/projects/bogambara_2nd_floor_bv.png",
+        "/projects/bogambara_en1.png",
+        "/projects/bogambara_fountain.png",
+        "/projects/bogambara_fountain2.png",
+        "/projects/bogambara_seat.png",
+        "/projects/bogambara_b2.png",
+        "/projects/bogambara_b3.png",
+        "/projects/bogambara_back.png",
+        "/projects/bogambara_bc_1.png",
+        "/projects/bogambara_ss_1.png",
+        "/projects/bogambara_ss_2.png",
+        "/projects/bogambara_ss_3.png",
+        "/projects/bogambara_ss_4.png",
+        "/projects/bogambara_ss_5.png",
+        "/projects/bogambara_ss_6.png",
+        "/projects/bogambara_ss_7.png",
+        "/projects/bogambara_ss_8.png"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Bogambara Prison: Urban Park Proposal",
+      "category": "Urban Design Album",
+      "imageUrl": "/projects/bogambara_up9.png",
+      "description": "A collection of 3D SketchUp models and Enscape renderings visualizing the proposed urban park and public realm adaptive reuse at Bogambara Prison.",
+      "type": "Model & Visualization",
+      "mediaGroup": [
+        "/projects/bogambara_up9.png",
+        "/projects/bogambara_up10.png",
+        "/projects/bogambara_up2.png",
+        "/projects/bogambara_up3.png",
+        "/projects/bogambara_up4.png",
+        "/projects/bogambara_up5.png",
+        "/projects/bogambara_up6.png",
+        "/projects/bogambara_up7.png",
+        "/projects/bogambara_up8.png"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Trincomalee Local Development Plan: 3D Models & Zoning Proposals",
+      "category": "Urban Design Album",
+      "imageUrl": "/projects/trinco_model_1.png",
+      "description": "A collection of 3D massing models, zoning visualisations, and urban design proposals prepared for the Trincomalee Local Development Plan.",
+      "type": "Model & Visualization",
+      "mediaGroup": [
+        "/projects/trinco_model_1.png",
+        "/projects/trinco_model_2.png",
+        "/projects/trinco_model_3.png",
+        "/projects/trinco_model_6.png",
+        "/projects/trinco_model_7.png",
+        "/projects/trinco_model_8.png",
+        "/projects/trinco_model_9.png",
+        "/projects/trinco_model_10.png",
+        "/projects/trinco_model_11.png",
+        "/projects/trinco_model_12.png",
+        "/projects/trinco_model_13.png",
+        "/projects/trinco_model_14.png",
+        "/projects/trinco_model_15.png",
+        "/projects/trinco_model_16.png",
+        "/projects/trinco_model_17.png",
+        "/projects/trinco_model_18.png",
+        "/projects/trinco_model_19.png"
+      ]
+    }
+  ],
+  "resume": {
+    "education": [
+      {
+        "degree": "BSc (Hons) in Urban Informatics and Planning",
+        "institution": "University of Moratuwa",
+        "period": "2022 - Present",
+        "gpa": "CGPA: 3.81",
+        "highlights": "Dean's List: L1S1, L1S2, L2S3, L3S5, L4S7"
+      }
+    ],
+    "experience": [
+      {
+        "role": "Intern – Research & Business Development",
+        "organization": "Global GIS (Pvt) Ltd",
+        "period": "Apr - Dec 2025",
+        "description": [
+          "Supported GIS, land development, infrastructure, and municipal projects through spatial analysis, field surveys, drone-based data collection, and technical reporting.",
+          "Conducted land-use, accessibility, terrain, and suitability assessments to support site feasibility studies, planning evaluations, and development decision-making.",
+          "Coordinated project datasets, survey outputs, maps, and analytical deliverables across GIS, survey, and planning teams, ensuring timely completion of project milestones.",
+          "Assisted in the preparation of technical reports, maps, presentations, and project documentation for public- and private-sector clients.",
+          "Processed and interpreted spatial datasets, including GNSS, LiDAR, photogrammetry, and drone survey outputs, to generate planning and development insights.",
+          "Supported proposal development, competitor analysis, and client presentations by contributing technical content and spatial evidence.",
+          "Utilized ArcGIS Pro, QGIS, Google Earth Engine, AutoCAD Civil 3D, Pix4D, and 3D Survey to deliver project outputs within multidisciplinary project environments."
+        ]
+      },
+      {
+        "role": "Part-Time Architectural Assistant",
+        "organization": "AIDA Design Studio",
+        "period": "Apr – Oct 2025",
+        "description": [
+          "Assisted in the preparation of architectural drawings, spatial layouts, and 3D models for residential and commercial development projects.",
+          "Developed design visualizations using AutoCAD, SketchUp, and Enscape to support concept development and client communication.",
+          "Supported design refinement and revisions based on planning considerations, site constraints, and client requirements.",
+          "Coordinated with architects during design development stages to ensure consistency between planning objectives and architectural outcomes."
+        ]
+      },
+      {
+        "role": "Freelance Designer",
+        "organization": "Commercial Land Development Project",
+        "period": "Jan 2023",
+        "description": [
+          "Supported planning and visualization of an 8-acre commercial land development project.",
+          "Prepared site layouts, AutoCAD plans, and SketchUp massing models.",
+          "Assisted in identifying suitable spatial arrangements to maximize accessibility and commercial functionality."
+        ]
+      },
+      {
+        "role": "Freelance Transcriber (Tamil to English)",
+        "organization": "Independent Contractor",
+        "period": "Oct 2023 & Nov 2024",
+        "description": [
+          "Transcribed Tamil audio recordings into English, ensuring accuracy and cultural context for clear understanding.",
+          "Completed projects efficiently and met client specifications, enhancing skills in bilingual transcription and translation."
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Foundations of Project Management",
+        "issuer": "University of Moratuwa (Online)",
+        "date": "2025",
+        "credentialId": "UOM-FPM-2025"
+      },
+      {
+        "name": "Project Scope and Schedule Management",
+        "issuer": "University of Moratuwa (Online)",
+        "date": "2026",
+        "credentialId": "UOM-PSSM-2026"
+      }
+    ],
+    "awards": [
+      {
+        "name": "Associate Member",
+        "issuer": "Institute of Town Planners Sri Lanka",
+        "date": "Present",
+        "description": "Professional association membership recognizing town and country planners."
+      },
+      {
+        "name": "Batch Representative (Semester 8 T&CP 21st Batch)",
+        "issuer": "University of Moratuwa",
+        "date": "2026",
+        "description": "Elected student representative managing cohort communications and academic organization."
+      },
+      {
+        "name": "Batch Representative (Majlis-Ul-Islam)",
+        "issuer": "University of Moratuwa",
+        "date": "2026",
+        "description": "Student representative for university community organization."
+      },
+      {
+        "name": "Translator",
+        "issuer": "Town & Country Planning Students’ Society",
+        "date": "2024 - 2025",
+        "description": "Translated planning literature and academic reviews."
+      },
+      {
+        "name": "Football Player - Team Captain",
+        "issuer": "School Football Team",
+        "date": "2014 - 2015",
+        "description": "Led school football team in regional competitions and training sessions."
+      }
+    ],
+    "volunteer": [
+      {
+        "role": "Volunteer Cartographer",
+        "organization": "Humanitarian OpenStreetMap Team (HOT)",
+        "period": "2023 - Present",
+        "description": "Digitized roads, buildings, and water bodies in disaster-affected areas to support search-and-rescue mapping efforts."
+      }
+    ]
+  },
+  "blog": [
+    {
+      "id": "blog1",
+      "title": "Getting Started with GeoPandas: A Beginner's GIS Tutorial",
+      "category": "GIS Tutorials",
+      "date": "June 12, 2026",
+      "readTime": "6 min read",
+      "summary": "Learn how to load spatial datasets, perform spatial joins, and plot beautiful thematic choropleth maps using Python and GeoPandas.",
+      "tags": [
+        "Python",
+        "GeoPandas",
+        "Spatial Data Science",
+        "Tutorial"
+      ],
+      "content": "GeoPandas extends the popular Pandas data analysis library to enable spatial operations in Python. In this tutorial, we walk through loading shapefiles and GeoJSON files, configuring Coordinate Reference Systems (CRS), performing spatial joins on points and polygons, and plotting customized thematic maps using Matplotlib. Python spatial scripting enables planners to automate repetitive mapping workflows that take hours in desktop GIS software."
+    },
+    {
+      "id": "blog2",
+      "title": "Urban Heat Islands: Monitoring Environmental Inequity from Space",
+      "category": "Remote Sensing Applications",
+      "date": "May 28, 2026",
+      "readTime": "8 min read",
+      "summary": "Exploring how satellite land surface temperature data can be combined with census demographics to address urban environmental injustices.",
+      "tags": [
+        "Landsat",
+        "LST",
+        "Environmental Justice",
+        "Remote Sensing"
+      ],
+      "content": "Urban Heat Islands (UHIs) represent localized areas with high thermal retention. By extracting thermal infrared sensor bands from Landsat 8/9 satellites, we can calculate Land Surface Temperature (LST). When joined with demographic layers, the spatial correlation becomes obvious: lower-income neighborhoods frequently suffer from higher thermal exposure due to a lack of urban green canopy and abundant asphalt. Modern remote sensing tools enable planners to locate priority urban forestry target zones."
+    },
+    {
+      "id": "blog3",
+      "title": "How Smart Cities use Spatial Analytics for Active Transportation",
+      "category": "Smart Cities",
+      "date": "April 15, 2026",
+      "readTime": "5 min read",
+      "summary": "Analyzing pedestrian walkability indices and bike lane connectivity using network analysis and open-source data.",
+      "tags": [
+        "Network Analysis",
+        "Active Transport",
+        "QGIS",
+        "OpenStreetMap"
+      ],
+      "content": "Active transportation—walking, biking, and micro-mobility—is key to sustainable cities. Using OpenStreetMap (OSM) data and QGIS Network Analysis, we can calculate pedestrian service areas and bike network connectivity. By identifying network gaps, like missing crosswalks or fragmented bike lanes, cities can invest in high-impact micro-infrastructure. Data-driven planning takes the guesswork out of building active transit networks."
+    }
+  ]
+}

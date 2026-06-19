@@ -1,0 +1,140 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-bg-base: var(--bg-base);
+  --color-bg-card: var(--bg-card);
+  --color-border-custom: var(--border-custom);
+  --color-text-base: var(--text-base);
+  --color-text-muted: var(--text-muted);
+  
+  --font-display: var(--font-outfit), sans-serif;
+  --font-sans: var(--font-inter), sans-serif;
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+:root {
+  --primary: #1E3A5F;      /* Deep Blue */
+  --secondary: #00897B;    /* Teal */
+  --accent: #F57C00;       /* Orange */
+  
+  --bg-base: #F8FAFC;      /* Light Off-White */
+  --bg-card: #FFFFFF;      /* Pure White */
+  --border-custom: #E2E8F0; /* Light Slate Border */
+  --text-base: #0F172A;    /* Dark Slate Text */
+  --text-muted: #475569;   /* Muted Gray Text */
+  
+  --font-outfit: 'Outfit', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+:root.dark {
+  --primary: #3B82F6;      /* Bright Blue */
+  --secondary: #2DD4BF;    /* Bright Teal */
+  --accent: #FB923C;       /* Bright Orange */
+  
+  --bg-base: #0B0F19;      /* Dark Navy Slate */
+  --bg-card: #151D30;      /* Slate Card */
+  --border-custom: rgba(45, 212, 191, 0.15); /* Teal accent border */
+  --text-base: #F8FAFC;    /* Ice White Text */
+  --text-muted: #94A3B8;   /* Slate Gray Text */
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-base);
+  color: var(--text-base);
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-base);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* Glassmorphism utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 137, 123, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.dark .glass-card {
+  background: rgba(21, 29, 48, 0.75);
+  border: 1px solid rgba(45, 212, 191, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 137, 123, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.dark .glass-card:hover {
+  border-color: rgba(45, 212, 191, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Leaflet dark mode overrides */
+.dark .leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3);
+}
+
+.leaflet-container {
+  font-family: var(--font-sans), sans-serif;
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--bg-card) !important;
+  color: var(--text-base) !important;
+  border: 1px solid var(--border-custom);
+  border-radius: 4px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--bg-card) !important;
+}
+
+.leaflet-bar {
+  border: 1px solid var(--border-custom) !important;
+  box-shadow: none !important;
+}
+
+.leaflet-bar a {
+  background-color: var(--bg-card) !important;
+  color: var(--text-base) !important;
+  border-bottom: 1px solid var(--border-custom) !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: var(--border-custom) !important;
+}
