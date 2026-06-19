@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Search, X } from "lucide-react";
 import { Github } from "./Icons";
 import portfolioData from "../../data/portfolioData.json";
+import { getAssetPath } from "../utils/assetPath";
 
 interface GalleryLink {
   id: number;
@@ -159,7 +160,7 @@ export default function FeaturedProjects() {
                 <div className="relative w-full aspect-[16/10] overflow-hidden bg-slate-900/5 border-b border-border-custom">
                   {proj.imageUrl.endsWith(".mp4") || proj.imageUrl.endsWith(".webm") ? (
                     <video
-                      src={proj.imageUrl}
+                      src={getAssetPath(proj.imageUrl)}
                       autoPlay
                       loop
                       muted
@@ -168,7 +169,7 @@ export default function FeaturedProjects() {
                     />
                   ) : (
                     <img
-                      src={proj.imageUrl}
+                      src={getAssetPath(proj.imageUrl)}
                       alt={proj.title}
                       className="w-full h-full object-cover mix-blend-luminosity opacity-60 group-hover:mix-blend-normal group-hover:opacity-85 group-hover:scale-102 transition-all duration-500 ease-out"
                       loading="lazy"
@@ -244,7 +245,7 @@ export default function FeaturedProjects() {
               <div className="relative w-full aspect-[16/9] bg-slate-900 border-b border-border-custom">
                 {activeProject.imageUrl.endsWith(".mp4") || activeProject.imageUrl.endsWith(".webm") ? (
                   <video
-                    src={activeProject.imageUrl}
+                    src={getAssetPath(activeProject.imageUrl)}
                     autoPlay
                     loop
                     muted
@@ -254,7 +255,7 @@ export default function FeaturedProjects() {
                   />
                 ) : (
                   <img
-                    src={activeProject.imageUrl}
+                    src={getAssetPath(activeProject.imageUrl)}
                     alt={activeProject.title}
                     className="w-full h-full object-cover opacity-80"
                   />
@@ -344,7 +345,7 @@ export default function FeaturedProjects() {
 
                   {activeProject.reportLink !== "#" && activeProject.reportLink !== "" && (
                     <a
-                      href={activeProject.reportLink}
+                      href={getAssetPath(activeProject.reportLink)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 bg-secondary hover:bg-secondary/95 text-white font-mono text-xs uppercase tracking-wider px-5 py-3 rounded-sm transition-all shadow-md shadow-secondary/15"
@@ -356,7 +357,7 @@ export default function FeaturedProjects() {
 
                   {activeProject.panelLink && activeProject.panelLink !== "" && (
                     <a
-                      href={activeProject.panelLink}
+                      href={getAssetPath(activeProject.panelLink)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 border border-border-custom bg-bg-card hover:bg-slate-50 dark:hover:bg-slate-800/30 text-text-base font-mono text-xs uppercase tracking-wider px-5 py-3 rounded-sm transition-all"
@@ -368,7 +369,7 @@ export default function FeaturedProjects() {
 
                   {activeProject.customLink && activeProject.customLink !== "" && (
                     <a
-                      href={activeProject.customLink}
+                      href={getAssetPath(activeProject.customLink)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 border border-border-custom bg-bg-card hover:bg-slate-50 dark:hover:bg-slate-800/30 text-text-base font-mono text-xs uppercase tracking-wider px-5 py-3 rounded-sm transition-all"

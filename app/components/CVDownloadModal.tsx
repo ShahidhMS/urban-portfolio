@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Download, X, ShieldAlert, Award } from "lucide-react";
+import { getAssetPath } from "../utils/assetPath";
 
 interface CVDownloadModalProps {
   isOpen: boolean;
@@ -41,7 +42,7 @@ export default function CVDownloadModal({ isOpen, onClose }: CVDownloadModalProp
     }
 
     // Open PDF in a new tab
-    window.open("/cv.pdf", "_blank");
+    window.open(getAssetPath("/cv.pdf"), "_blank");
     onClose();
   };
 

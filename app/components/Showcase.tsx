@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ZoomIn, X, Compass } from "lucide-react";
 import portfolioData from "../../data/portfolioData.json";
+import { getAssetPath } from "../utils/assetPath";
 
 interface GalleryItem {
   id: number;
@@ -117,7 +118,7 @@ export default function Showcase() {
         >
           {/* Image */}
           <img
-            src={item.imageUrl}
+            src={getAssetPath(item.imageUrl)}
             alt={item.title}
             className="w-full h-full object-cover mix-blend-luminosity opacity-50 group-hover:mix-blend-normal group-hover:opacity-90 group-hover:scale-102 transition-all duration-500 ease-out"
             loading="lazy"
@@ -272,7 +273,7 @@ export default function Showcase() {
                     {/* Active Slide Media */}
                     {activeItem.mediaGroup[currentMediaIndex].endsWith(".mp4") ? (
                       <video
-                        src={activeItem.mediaGroup[currentMediaIndex]}
+                        src={getAssetPath(activeItem.mediaGroup[currentMediaIndex])}
                         controls
                         autoPlay
                         loop
@@ -281,7 +282,7 @@ export default function Showcase() {
                       />
                     ) : (
                       <img
-                        src={activeItem.mediaGroup[currentMediaIndex]}
+                        src={getAssetPath(activeItem.mediaGroup[currentMediaIndex])}
                         alt={`${activeItem.title} - view ${currentMediaIndex + 1}`}
                         className="w-full h-full object-contain"
                       />
@@ -314,7 +315,7 @@ export default function Showcase() {
                   </>
                 ) : (
                   <img
-                    src={activeItem.imageUrl}
+                    src={getAssetPath(activeItem.imageUrl)}
                     alt={activeItem.title}
                     className="w-full h-full object-contain"
                   />

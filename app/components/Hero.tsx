@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { getAssetPath } from "../utils/assetPath";
 import { ArrowRight, FileText, Mail } from "lucide-react";
 import portfolioData from "../../data/portfolioData.json";
 
@@ -115,7 +116,7 @@ export default function Hero() {
           {/* Main Visual Container */}
           <div className="relative w-full aspect-square max-w-[420px] lg:max-w-full overflow-hidden border border-border-custom rounded-lg bg-bg-card shadow-xl group">
             <img
-              src={profile.profileImage}
+              src={getAssetPath(profile.profileImage)}
               alt={profile.name}
               className="w-full h-full object-cover transition-transform duration-[6000ms] ease-out select-none pointer-events-none group-hover:scale-105"
               loading="eager"

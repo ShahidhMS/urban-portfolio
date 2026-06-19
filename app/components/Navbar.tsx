@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { getAssetPath } from "../utils/assetPath";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 
@@ -43,7 +44,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#home" className="flex items-center gap-3 select-none">
           <img
-            src="/logo.png"
+            src={getAssetPath("/logo.png")}
             alt="Shahidh Saliheen"
             className="h-10 w-auto object-contain mix-blend-multiply dark:invert dark:mix-blend-screen transition-all duration-300"
           />

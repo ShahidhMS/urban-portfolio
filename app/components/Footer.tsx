@@ -1,6 +1,7 @@
 import { ArrowUp, Mail, FileText } from "lucide-react";
 import { Github, Linkedin } from "./Icons";
 import portfolioData from "../../data/portfolioData.json";
+import { getAssetPath } from "../utils/assetPath";
 
 export default function Footer() {
   const { profile } = portfolioData;
@@ -13,7 +14,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start gap-3 select-none">
           <div className="flex items-center gap-2">
             <img
-              src="/logo.png"
+              src={getAssetPath("/logo.png")}
               alt="Shahidh Saliheen"
               className="h-9 w-auto object-contain mix-blend-multiply dark:invert dark:mix-blend-screen transition-all duration-300"
             />
