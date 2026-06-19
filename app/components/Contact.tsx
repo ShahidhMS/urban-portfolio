@@ -171,7 +171,7 @@ export default function Contact() {
                     <input
                       type="text"
                       id="name"
-                      placeholder="Sarah Jenkins"
+                      placeholder={profile.name}
                       value={name}
                       onChange={(e) => {
                         setName(e.target.value);
@@ -180,7 +180,7 @@ export default function Contact() {
                       className="bg-bg-base/30 border border-border-custom rounded-sm px-4 py-3 text-xs md:text-sm text-text-base placeholder-text-muted/50 focus:outline-none focus:border-secondary focus:bg-bg-base/50 transition-all duration-200"
                     />
                   </div>
-
+ 
                   <div className="flex flex-col gap-2">
                     <label htmlFor="email" className="font-display font-bold text-xs text-text-base uppercase tracking-wider">
                       Email Address
@@ -188,7 +188,7 @@ export default function Contact() {
                     <input
                       type="email"
                       id="email"
-                      placeholder="sarah@academic.edu"
+                      placeholder={profile.email}
                       value={email}
                       onChange={(e) => {
                         setEmail(e.target.value);
