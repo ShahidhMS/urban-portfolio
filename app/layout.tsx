@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     "Google Earth Engine"
   ],
   authors: [{ name: "Shahidh Saliheen" }],
+  icons: {
+    icon: "/urban-portfolio/logo.png",
+    apple: "/urban-portfolio/logo.png",
+  },
 };
 
 export default function RootLayout({

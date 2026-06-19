@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Briefcase, Download, FileCheck, GraduationCap, Heart } from "lucide-react";
+import { Award, Briefcase, Download, FileCheck, GraduationCap } from "lucide-react";
 import portfolioData from "../../data/portfolioData.json";
 
 export default function Resume() {
@@ -185,24 +185,7 @@ export default function Resume() {
               </div>
             </div>
 
-            {/* Volunteer Card */}
-            <div className="glass-card p-6 border border-border-custom rounded-lg relative">
-              <div className="flex items-center gap-2 mb-6 border-b border-border-custom pb-4">
-                <Heart className="w-5 h-5 text-secondary" />
-                <h3 className="font-display font-bold text-sm tracking-wider uppercase text-text-base">
-                  Volunteering
-                </h3>
-              </div>
-              <div className="space-y-4">
-                {resume.volunteer.map((vol, idx) => (
-                  <div key={idx} className="text-xs">
-                    <h4 className="font-semibold text-text-base leading-snug">{vol.role}</h4>
-                    <p className="text-text-muted mt-0.5 mb-2">{vol.organization} &bull; {vol.period}</p>
-                    <p className="text-text-muted font-light leading-relaxed">{vol.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
