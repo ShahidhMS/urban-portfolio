@@ -171,7 +171,7 @@ export default function Contact() {
                     <input
                       type="text"
                       id="name"
-                      placeholder={profile.name}
+                      placeholder="Your Name"
                       value={name}
                       onChange={(e) => {
                         setName(e.target.value);
@@ -188,7 +188,7 @@ export default function Contact() {
                     <input
                       type="email"
                       id="email"
-                      placeholder={profile.email}
+                      placeholder="Your Email"
                       value={email}
                       onChange={(e) => {
                         setEmail(e.target.value);
