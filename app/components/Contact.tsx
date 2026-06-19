@@ -32,10 +32,10 @@ export default function Contact() {
 
     setStatus("submitting");
 
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "20182cff-c06c-4818-9094-ec5e796c45f2";
     if (!accessKey || accessKey === "YOUR_ACCESS_KEY_HERE") {
       setStatus("error");
-      setErrorMsg("Contact form key is not configured. Please add your Web3Forms Access Key in your .env.local file.");
+      setErrorMsg("Contact form key is not configured. Please add your Web3Forms Access Key in your configuration.");
       return;
     }
 
