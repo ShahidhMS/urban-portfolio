@@ -83,8 +83,9 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
         </div>
 
         {/* Name and Title */}
-        <h1 className="font-display font-black text-3xl tracking-wider text-white uppercase mb-2">
-          Shahidh MS <span className="text-secondary">Spatial</span>
+        <h1 className="font-display font-black text-3xl tracking-wider text-white uppercase mb-3 flex flex-col gap-1.5">
+          <span>Shahidh MS</span>
+          <span className="text-secondary text-xl tracking-[0.2em] font-extrabold">Spatial Portal</span>
         </h1>
         <p className="font-mono text-xs tracking-widest text-[#94A3B8] uppercase mb-8">
           Geographic Information Systems • Urban Analytics
