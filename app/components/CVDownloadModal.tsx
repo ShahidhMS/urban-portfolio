@@ -18,7 +18,33 @@ export default function CVDownloadModal({ isOpen, onClose }: CVDownloadModalProp
 
   if (!isOpen) return null;
 
+  const sendDownloadNotification = async (viewerName: string, viewerEmail: string, viewerOrg: string) => {
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "20182cff-c06c-4818-9094-ec5e796c45f2";
+    try {
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: viewerName,
+          email: viewerEmail !== "N/A" ? viewerEmail : "no-reply@web3forms.com",
+          message: `CV Download Event Details:\n• Name: ${viewerName}\n• Organization: ${viewerOrg}\n• Email: ${viewerEmail}`,
+          subject: `🚨 CV Download Alert: ${viewerName} (${viewerOrg})`,
+          from_name: "Shahidh Saliheen Portfolio Alerts"
+        })
+      });
+    } catch (e) {
+      console.error("Failed to send CV download email alert", e);
+    }
+  };
+
   const logDownload = (viewerName: string, viewerEmail: string, viewerOrg: string) => {
+    // Send background email notification
+    sendDownloadNotification(viewerName, viewerEmail, viewerOrg);
+
     try {
       const historyStr = localStorage.getItem("cv_download_history") || "[]";
       const history = JSON.parse(historyStr);
