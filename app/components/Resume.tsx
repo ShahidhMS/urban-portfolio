@@ -151,11 +151,6 @@ export default function Resume() {
                   <div key={idx} className="text-xs">
                     <h4 className="font-semibold text-text-base leading-snug">{cert.name}</h4>
                     <p className="text-text-muted mt-0.5">{cert.issuer} &bull; {cert.date}</p>
-                    {cert.credentialId && (
-                      <p className="font-mono text-[10px] text-text-muted/60 mt-1 select-all">
-                        ID: {cert.credentialId}
-                      </p>
-                    )}
                   </div>
                 ))}
               </div>

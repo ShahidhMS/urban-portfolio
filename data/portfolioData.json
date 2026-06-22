@@ -727,15 +727,13 @@
     "certifications": [
       {
         "name": "Foundations of Project Management",
-        "issuer": "University of Moratuwa (Online)",
-        "date": "2025",
-        "credentialId": "UOM-FPM-2025"
+        "issuer": "University of Moratuwa",
+        "date": "2025"
       },
       {
         "name": "Project Scope and Schedule Management",
-        "issuer": "University of Moratuwa (Online)",
-        "date": "2026",
-        "credentialId": "UOM-PSSM-2026"
+        "issuer": "University of Moratuwa",
+        "date": "2026"
       }
     ],
     "awards": [
