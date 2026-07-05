@@ -673,45 +673,70 @@
       {
         "degree": "BSc (Hons) in Urban Informatics and Planning",
         "institution": "University of Moratuwa",
-        "period": "2022 - Present",
+        "period": "Apr 2022 - May 2026",
         "gpa": "CGPA: 3.81",
         "highlights": "Dean's List: L1S1, L1S2, L2S3, L3S5, L4S7"
       }
     ],
     "experience": [
       {
-        "role": "Intern – Research & Business Development",
-        "organization": "Global GIS (Pvt) Ltd",
-        "period": "Apr - Dec 2025",
+        "role": "Assistant Project Manager",
+        "organization": "EML Consultants PLC",
+        "period": "Mar - Jun 2026",
         "description": [
-          "Supported GIS, land development, infrastructure, and municipal projects through spatial analysis, field surveys, drone-based data collection, and technical reporting.",
-          "Conducted land-use, accessibility, terrain, and suitability assessments to support site feasibility studies, planning evaluations, and development decision-making.",
-          "Coordinated project datasets, survey outputs, maps, and analytical deliverables across GIS, survey, and planning teams, ensuring timely completion of project milestones.",
-          "Assisted in the preparation of technical reports, maps, presentations, and project documentation for public- and private-sector clients.",
-          "Processed and interpreted spatial datasets, including GNSS, LiDAR, photogrammetry, and drone survey outputs, to generate planning and development insights.",
-          "Supported proposal development, competitor analysis, and client presentations by contributing technical content and spatial evidence.",
-          "Utilized ArcGIS Pro, QGIS, Google Earth Engine, AutoCAD Civil 3D, Pix4D, and 3D Survey to deliver project outputs within multidisciplinary project environments."
+          "Coordinated project activities, schedules, deliverables, and stakeholder communications across multiple consultancy assignments, ensuring effective project implementation and timely delivery.",
+          "Developed project monitoring and tracking dashboards to support project management functions, enabling systematic monitoring of project progress, milestones, and performance indicators.",
+          "Conducted research, data analysis, and technical assessments for urban planning, environmental planning, and development-related projects to support evidence-based decision-making.",
+          "Assisted in the preparation of technical reports, project documentation, presentations, and progress updates for clients and project teams.",
+          "Collaborated with multidisciplinary teams to manage project information, monitor implementation progress, and support project planning and reporting activities.",
+          "Supported the coordination of project workflows, documentation management, and compliance with project requirements throughout the project lifecycle."
+        ]
+      },
+      {
+        "role": "Intern - Research & Business Development",
+        "organization": "Global GIS (Pvt) Ltd",
+        "period": "Sep - Dec 2025",
+        "description": [
+          "Conducted spatial, social, and economic analysis of night-time food activity nodes to understand emerging urban dynamics and informal economic systems.",
+          "Collected and analyzed primary data through surveys, stakeholder interactions, and field observations to assess user behavior, accessibility, and operational patterns.",
+          "Applied spatial analytical techniques including Logistic Regression, GWR, and SCCM to identify location patterns, clustering behavior, and growth drivers.",
+          "Produced maps, visualizations, and evidence-based recommendations to support planning and management of night-time urban activities."
         ]
       },
       {
         "role": "Architectural Assistant",
         "organization": "AIDA Design Studio",
-        "period": "Apr – Oct 2025",
+        "period": "Apr - Oct 2025",
         "description": [
-          "Assisted in the preparation of architectural drawings, spatial layouts, and 3D models for residential and commercial development projects.",
-          "Developed design visualizations using AutoCAD, SketchUp, and Enscape to support concept development and client communication.",
-          "Supported design refinement and revisions based on planning considerations, site constraints, and client requirements.",
-          "Coordinated with architects during design development stages to ensure consistency between planning objectives and architectural outcomes."
+          "Assisted in preparing architectural drawings, site layouts, and spatial development concepts for residential and commercial projects.",
+          "Developed AutoCAD drawings, SketchUp models, and visualization materials to support design development and client presentations.",
+          "Supported design reviews by considering site constraints, accessibility requirements, land-use compatibility, and planning considerations.",
+          "Coordinated with architects and design teams during project development stages to ensure alignment between planning and design objectives.",
+          "Assisted in the preparation of project documentation, design revisions, and presentation materials throughout the design process."
+        ]
+      },
+      {
+        "role": "Assistant - Research & Business Development",
+        "organization": "Global GIS (Pvt) Ltd",
+        "period": "May - Aug 2025",
+        "description": [
+          "Supported municipal, infrastructure, heritage conservation, and land development projects through GIS-based spatial analysis and planning-related assessments.",
+          "Conducted land-use analysis, accessibility assessments, terrain evaluations, and site suitability studies to support planning and development decision-making.",
+          "Prepared GIS maps, spatial datasets, technical reports, and project documentation for public and private sector clients.",
+          "Collaborated with GIS specialists, surveyors, planners, and technical teams to deliver project outputs within established timelines.",
+          "Participated in drone surveys, GNSS-based data collection, and field investigations supporting planning and infrastructure projects."
         ]
       },
       {
         "role": "Freelance Designer",
-        "organization": "Commercial Land Development Project",
-        "period": "Jan 2023",
+        "organization": "Urban Development & Design Project",
+        "period": "Jan 2023 - Present",
         "description": [
-          "Supported planning and visualization of an 8-acre commercial land development project.",
-          "Prepared site layouts, AutoCAD plans, and SketchUp massing models.",
-          "Assisted in identifying suitable spatial arrangements to maximize accessibility and commercial functionality."
+          "Prepared conceptual urban design and development proposals for public space enhancement, heritage-led regeneration, and mixed-use development projects.",
+          "Conducted site analysis, land-use assessments, and spatial planning evaluations to identify development opportunities and support design decision-making.",
+          "Developed masterplans, site layouts, urban design concepts, and 3D visualizations using AutoCAD, SketchUp, and rendering tools.",
+          "Contributed to a coastal public space development proposal focused on improving public accessibility, recreational opportunities, and local economic activities.",
+          "Prepared a heritage-sensitive regeneration proposal for the Bogambara Prison precinct, integrating adaptive reuse, public space development, tourism potential, and heritage conservation principles."
         ]
       },
       {
@@ -728,12 +753,12 @@
       {
         "name": "Foundations of Project Management",
         "issuer": "University of Moratuwa",
-        "date": "2025"
+        "date": "Dec 2025"
       },
       {
         "name": "Project Scope and Schedule Management",
         "issuer": "University of Moratuwa",
-        "date": "2026"
+        "date": "Jan 2026"
       }
     ],
     "awards": [
