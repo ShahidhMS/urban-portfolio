@@ -145,6 +145,66 @@ export default function AIAssistant() {
       };
     }
 
+    // Direct General Intent Checks
+    
+    // 1. Professional Experience / Work / Timeline
+    if (q.includes("experience") || q.includes("work") || q.includes("job") || q.includes("employment") || q.includes("career") || q.includes("history") || q.includes("timeline") || q.includes("last") || q.includes("latest") || q.includes("current")) {
+      const experiences = portfolioData.resume.experience;
+      let reply = "💼 **Professional Experience Summary**:\n\n";
+      experiences.forEach((e: any) => {
+        reply += `• **${e.role}** at *${e.organization}* (${e.period})\n`;
+      });
+      reply += "\nWould you like me to show my professional timeline or explain a specific role?";
+      return {
+        text: reply,
+        isWidget: true,
+        wType: "timeline"
+      };
+    }
+
+    // 2. Education / GPA / Studies
+    if (q.includes("education") || q.includes("university") || q.includes("gpa") || q.includes("degree") || q.includes("studied") || q.includes("academic") || q.includes("moratuwa")) {
+      return {
+        text: "🎓 **Academic Background**:\n\n• **Degree**: Bachelor of Science (Honours) in Urban Informatics and Planning\n• **Institution**: University of Moratuwa\n• **Duration**: April 2022 – May 2026\n• **CGPA**: 3.81 / 4.20 (First Class Standing)\n• **Achievements**: Dean's List recipient in 5 semesters (L1S1, L1S2, L2S3, L3S5, L4S7)\n\nMy studies integrated traditional urban planning with GIS, Remote Sensing, spatial statistics, and data science."
+      };
+    }
+
+    // 3. General Skills / Software
+    if ((q.includes("skill") || q.includes("software") || q.includes("tool") || q.includes("program")) && 
+        !q.includes("arcgis") && !q.includes("qgis") && !q.includes("python") && !q.includes("sql") && !q.includes("drone") && !q.includes("photogrammetry") && !q.includes("lidar")) {
+      let reply = "🛠️ **Technical Skills Overview**:\n\n";
+      reply += "• **GIS & Remote Sensing**: ArcGIS Pro, QGIS, Google Earth Engine, spatial modeling, cartography.\n";
+      reply += "• **Programming & Data**: Python, R, SQL, spatial statistics (GWR, SCCM, MCDM).\n";
+      reply += "• **UAV & Drone Surveying**: Pix4D, 3D Survey, GNSS data collection, orthomosaic & DEM generation.\n";
+      reply += "• **Design & 3D**: AutoCAD Civil 3D, SketchUp, Enscape, Photoshop.\n\n";
+      reply += "Which of these technical areas would you like to explore in detail?";
+      return {
+        text: reply,
+        isWidget: true,
+        wType: "nav_suggestions"
+      };
+    }
+
+    // 4. General Projects List
+    if ((q.includes("project") || q.includes("portfolio") || q.includes("case study") || q.includes("show me") || q.includes("list")) && 
+        !q.includes("pettah") && !q.includes("recharge") && !q.includes("water") && !q.includes("food") && !q.includes("night") && 
+        !q.includes("yolo") && !q.includes("traffic") && !q.includes("elephant") && !q.includes("hec") && 
+        !q.includes("trinco") && !q.includes("nuwara") && !q.includes("eliya") && !q.includes("drone") && 
+        !q.includes("waste") && !q.includes("chalet") && !q.includes("norochcholai") && !q.includes("ramba") && !q.includes("mining")) {
+      
+      const projects = portfolioData.projects;
+      let reply = "🏙️ **Featured Projects Index**:\n\n";
+      projects.forEach((p: any) => {
+        reply += `• **${p.title}** (${p.category})\n`;
+      });
+      reply += "\nWould you like me to explain any of these project case studies?";
+      return {
+        text: reply,
+        isWidget: true,
+        wType: "nav_suggestions"
+      };
+    }
+
     // Dynamic Search in Projects
     const projects = portfolioData.projects;
     let matchedProject = null;
@@ -161,6 +221,9 @@ export default function AIAssistant() {
       const queryWords = q.split(/\s+/);
       queryWords.forEach(word => {
         if (word.length < 3) return;
+        // Ignore generic search words to prevent false-positive project matches
+        if (["professional", "experience", "project", "projects", "study", "studies", "analysis", "analyses", "about", "detail", "details", "list", "show"].includes(word)) return;
+        
         if (titleTokens.some(t => t.includes(word))) score += 4;
         if (idTokens.some(t => t.includes(word))) score += 5;
         if (descTokens.some(t => t.includes(word))) score += 2;
