@@ -224,10 +224,19 @@ export default function FeaturedProjects() {
       {/* Expanded Project Modal Overlay */}
       <AnimatePresence>
         {activeProject && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div 
+            onClick={() => {
+              setActiveProject(null);
+              if (window.location.hash) {
+                window.history.replaceState({}, "", window.location.pathname + window.location.search);
+              }
+            }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm cursor-pointer"
+          >
             <motion.div
+              onClick={(e) => e.stopPropagation()}
               layoutId={`proj-${activeProject.id}`}
-              className="bg-bg-card border border-border-custom rounded-lg max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl relative"
+              className="bg-bg-card border border-border-custom rounded-lg max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl relative cursor-default"
             >
               {/* Close Button */}
               <button

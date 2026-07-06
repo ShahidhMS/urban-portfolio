@@ -87,12 +87,16 @@ export default function CVDownloadModal({ isOpen, onClose }: CVDownloadModalProp
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div 
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm cursor-pointer"
+    >
       <motion.div
+        onClick={(e) => e.stopPropagation()}
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="bg-bg-card border border-border-custom rounded-lg max-w-md w-full p-8 shadow-2xl relative"
+        className="bg-bg-card border border-border-custom rounded-lg max-w-md w-full p-8 shadow-2xl relative cursor-default"
       >
         {/* Close Button */}
         <button
