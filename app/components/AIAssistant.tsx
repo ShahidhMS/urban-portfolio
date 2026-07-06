@@ -46,6 +46,21 @@ export default function AIAssistant() {
   
   const chatEndRef = useRef<HTMLDivElement>(null);
 
+  // Helper to format markdown bold text
+  const formatText = (text: string) => {
+    if (!text) return "";
+    const parts = text.split("**");
+    return parts.map((part, index) => 
+      index % 2 === 1 ? (
+        <strong key={index} className="font-semibold text-text-base">
+          {part}
+        </strong>
+      ) : (
+        part
+      )
+    );
+  };
+
   // Auto scroll to bottom
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -367,7 +382,7 @@ export default function AIAssistant() {
                   <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-bg-card"></span>
                 </div>
                 <div>
-                  <h3 className="font-display font-semibold text-sm text-text-base">Shahidh AI</h3>
+                  <h3 className="font-display font-semibold text-sm text-text-base">Shahidh's AI Assistant</h3>
                   <p className="font-mono text-[9px] uppercase tracking-widest text-text-muted">Digital Twin Assistant</p>
                 </div>
               </div>
@@ -406,7 +421,7 @@ export default function AIAssistant() {
                           : "bg-bg-base border border-border-custom text-text-base rounded-bl-none font-light"
                       }`}
                     >
-                      {msg.text}
+                      {formatText(msg.text)}
 
                       {/* Render custom widgets */}
                       {msg.isWidget && msg.widgetType === "nav_suggestions" && (
