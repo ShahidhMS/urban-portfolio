@@ -75,7 +75,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-bg-base text-text-base transition-colors duration-300 font-sans">
         <ThemeProvider>
           {children}
-          <AIAssistant />
+          {/* <AIAssistant /> */}
         </ThemeProvider>
       </body>
     </html>
