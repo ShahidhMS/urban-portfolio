@@ -274,7 +274,12 @@ export default function AIAssistant() {
         text: reply,
         isWidget: true,
         wType: "nav_suggestions",
-        wData: { reportUrl: p.reportLink, id: p.id }
+        wData: { 
+          reportUrl: p.reportLink, 
+          customUrl: p.customLink, 
+          customLabel: p.customLinkLabel, 
+          id: p.id 
+        }
       };
     }
 
@@ -633,6 +638,14 @@ export default function AIAssistant() {
                                 >
                                   📄 Open Report
                                 </button>
+                                {msg.widgetData.customUrl && (
+                                  <button 
+                                    onClick={() => window.open(msg.widgetData.customUrl.startsWith('/') ? `/urban-portfolio${msg.widgetData.customUrl}` : msg.widgetData.customUrl, "_blank")} 
+                                    className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer flex items-center gap-1"
+                                  >
+                                    📄 {msg.widgetData.customLabel || "Custom Link"}
+                                  </button>
+                                )}
                                 <button 
                                   onClick={() => {
                                     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
