@@ -111,16 +111,16 @@ export default function AIAssistant() {
     }
   };
 
-  // Match keyword answers
+  // Match queries dynamically against portfolioData database
   const parseQueryAndAnswer = (query: string): { text: string; mode?: string; isWidget?: boolean; wType?: "recruiter" | "skill_match" | "interview" | "nav_suggestions" | "timeline"; wData?: any } => {
-    const q = query.toLowerCase();
+    const q = query.toLowerCase().trim();
 
     // Check modes first
     if (q.includes("interview") || q.includes("mock") || q.includes("test me")) {
       setInterviewStep(1);
       setCurrentMode("interview");
       return {
-        text: "🎯 Welcome to Mock Interview Mode!\n\nI will ask you 3 typical planning & GIS questions to evaluate your fit. Let's start:\n\n**Question 1: Can you explain a GIS project you worked on and the methodologies you applied?**",
+        text: "🎯 **Welcome to Mock Interview Mode!**\n\nI will ask you 3 typical planning & GIS questions to evaluate your fit. Let's start:\n\n**Question 1: Can you explain a GIS project you worked on and the methodologies you applied?**",
         mode: "interview"
       };
     }
@@ -128,7 +128,7 @@ export default function AIAssistant() {
     if (q.includes("job description") || q.includes("jd") || q.includes("matcher") || q.includes("match")) {
       setCurrentMode("skill_match");
       return {
-        text: "📋 Welcome to the Skill Matcher!\n\nPlease paste the requirements or text of your Job Description (JD) below, and I will analyze how my skills and experience match it.",
+        text: "📋 **Welcome to the Skill Matcher!**\n\nPlease paste the requirements or text of your Job Description (JD) below, and I will analyze how my skills and experience match it.",
         mode: "skill_match",
         isWidget: true,
         wType: "skill_match"
@@ -138,47 +138,182 @@ export default function AIAssistant() {
     if (q.includes("hiring") || q.includes("recruiting") || q.includes("recruiter") || q.includes("job opening")) {
       setCurrentMode("recruiter");
       return {
-        text: "🏢 Recruiter Mode Activated!\n\nBased on your role, here is a custom summary of why I may be a strong fit for your team:",
+        text: "🏢 **Recruiter Mode Activated!**\n\nBased on your role, here is a custom summary of why I may be a strong fit for your team:",
         mode: "recruiter",
         isWidget: true,
         wType: "recruiter"
       };
     }
 
-    // Standard answers
+    // Dynamic Search in Projects
+    const projects = portfolioData.projects;
+    let matchedProject = null;
+    let maxProjectScore = 0;
+
+    for (const proj of projects) {
+      let score = 0;
+      const titleTokens = proj.title.toLowerCase().split(/\s+/);
+      const descTokens = proj.description.toLowerCase().split(/\s+/);
+      const idTokens = proj.id.toLowerCase().split("-");
+      const categoryTokens = proj.category.toLowerCase().split(/\s+/);
+      const toolsTokens = proj.tools.map(t => t.toLowerCase());
+
+      const queryWords = q.split(/\s+/);
+      queryWords.forEach(word => {
+        if (word.length < 3) return;
+        if (titleTokens.some(t => t.includes(word))) score += 4;
+        if (idTokens.some(t => t.includes(word))) score += 5;
+        if (descTokens.some(t => t.includes(word))) score += 2;
+        if (categoryTokens.some(t => t.includes(word))) score += 3;
+        if (toolsTokens.some(t => t.includes(word) || word.includes(t))) score += 3;
+      });
+
+      // Special exact phrase boosts
+      if (proj.id === "groundwater-recharge" && (q.includes("groundwater") || q.includes("ground water") || q.includes("water"))) {
+        score += 20;
+      }
+      if (proj.id === "pettah-urban-regeneration" && (q.includes("pettah") || q.includes("regeneration"))) {
+        score += 20;
+      }
+      if (proj.id === "nighttime-food-culture" && (q.includes("night") || q.includes("food") || q.includes("economy"))) {
+        score += 20;
+      }
+      if (proj.id === "traffic-analysis-yolo" && (q.includes("traffic") || q.includes("yolo") || q.includes("computer vision"))) {
+        score += 20;
+      }
+      if (proj.id === "human-elephant-conflict" && (q.includes("elephant") || q.includes("hec") || q.includes("mitigation"))) {
+        score += 20;
+      }
+      if (proj.id === "nuwara-eliya-heritage-planning" && (q.includes("nuwara") || q.includes("eliya") || q.includes("heritage"))) {
+        score += 20;
+      }
+      if (proj.id === "trincomalee-local-plan" && (q.includes("trinco") || q.includes("trincomalee") || q.includes("local plan"))) {
+        score += 20;
+      }
+
+      if (score > maxProjectScore && score >= 3) {
+        maxProjectScore = score;
+        matchedProject = proj;
+      }
+    }
+
+    if (matchedProject) {
+      const p = matchedProject;
+      let reply = `🗺️ **Project Case Study: ${p.title}**\n\n`;
+      reply += `**Category**: ${p.category}\n\n`;
+      reply += `**Overview**:\n${p.description}\n\n`;
+      reply += `**Methodology & Tools**:\n` + p.tools.map((t: string) => `• ${t}`).join("\n") + `\n\n`;
+      reply += `**Key Outcomes**:\n` + p.outcomes.map((o: string) => `• ${o}`).join("\n") + `\n\n`;
+      if (p.stats && p.stats.datasets) {
+        reply += `**Datasets Used**:\n${p.stats.datasets}\n\n`;
+      }
+      return {
+        text: reply,
+        isWidget: true,
+        wType: "nav_suggestions",
+        wData: { reportUrl: p.reportLink, id: p.id }
+      };
+    }
+
+    // Dynamic Search in Professional Experience
+    const experiences = portfolioData.resume.experience;
+    let matchedExp = null;
+    let maxExpScore = 0;
+
+    for (const exp of experiences) {
+      let score = 0;
+      const org = exp.organization.toLowerCase();
+      const role = exp.role.toLowerCase();
+
+      if (q.includes(org) || org.includes(q)) score += 10;
+      if (q.includes(role) || role.includes(q)) score += 5;
+      
+      if (org.includes("eml") && q.includes("eml")) score += 15;
+      if (org.includes("global gis") && (q.includes("global") || q.includes("gis"))) score += 15;
+      if (org.includes("aida") && q.includes("aida")) score += 15;
+
+      if (score > maxExpScore && score >= 5) {
+        maxExpScore = score;
+        matchedExp = exp;
+      }
+    }
+
+    if (matchedExp) {
+      const e = matchedExp;
+      let reply = `💼 **Professional Role: ${e.role}**\n`;
+      reply += `**Organization**: ${e.organization}\n`;
+      reply += `**Duration**: ${e.period}\n\n`;
+      reply += `**Key Responsibilities**:\n` + e.description.map((d: string) => `• ${d}`).join("\n");
+      return {
+        text: reply
+      };
+    }
+
+    // Dynamic Search in Skills
+    const rsSkills = portfolioData.skills.gisRemoteSensing.map(s => s.name.toLowerCase());
+    const upSkills = portfolioData.skills.urbanPlanning.map(s => s.name.toLowerCase());
+    const pdSkills = portfolioData.skills.programmingDesign.map(s => s.name.toLowerCase());
+    const allSkills = [...rsSkills, ...upSkills, ...pdSkills];
+    
+    let matchedSkill = "";
+    for (const s of allSkills) {
+      if (q.includes(s) || s.includes(q)) {
+        matchedSkill = s;
+        break;
+      }
+    }
+
+    if (matchedSkill) {
+      let category = "";
+      let level = 90;
+      
+      const rsMatch = portfolioData.skills.gisRemoteSensing.find(s => s.name.toLowerCase() === matchedSkill);
+      const upMatch = portfolioData.skills.urbanPlanning.find(s => s.name.toLowerCase() === matchedSkill);
+      const pdMatch = portfolioData.skills.programmingDesign.find(s => s.name.toLowerCase() === matchedSkill);
+
+      if (rsMatch) { category = "GIS & Remote Sensing"; level = rsMatch.level; }
+      else if (upMatch) { category = "Urban Planning & Design"; level = upMatch.level; }
+      else if (pdMatch) { category = "Programming & Design Tools"; level = pdMatch.level; }
+
+      let reply = `📊 **Technical Skill: ${matchedSkill.toUpperCase()}**\n\n`;
+      reply += `**Category**: ${category}\n`;
+      reply += `**Proficiency**: ${level}%\n\n`;
+      
+      const relatedProjects = projects.filter(p => 
+        p.tools.some(t => t.toLowerCase().includes(matchedSkill) || matchedSkill.includes(t.toLowerCase()))
+      );
+
+      if (relatedProjects.length > 0) {
+        reply += `**Applied in Projects**:\n` + relatedProjects.map(p => `• **${p.title}** (${p.category})`).join("\n");
+      }
+
+      return {
+        text: reply
+      };
+    }
+
+    // Specific FAQ or conceptual checks
+    if (q.includes("gwr") || q.includes("geographically weighted")) {
+      return {
+        text: "📊 **Geographically Weighted Regression (GWR)** is a spatial statistical modeling technique I used in my **Night-Time Food Culture Research**.\n\nUnlike standard regression models that assume relationships are constant across space, GWR calculates local coefficients to capture how relationships vary geographically across different neighborhoods of Colombo."
+      };
+    }
+    if (q.includes("sccm") || q.includes("coupling")) {
+      return {
+        text: "🔗 **Spatial Coupling Coordination Model (SCCM)** is an analytical model I applied in my undergraduate research to evaluate the level of coordination and interaction between night-time food activity nodes and transport network accessibility in Colombo."
+      };
+    }
+
+    // Static matches fallback
     if (q.includes("who are you") || q.includes("about") || q.includes("tell me about yourself")) {
       return {
         text: "I am Shahidh Saliheen, an Urban Planning graduate from the University of Moratuwa. I specialize in integrating traditional urban planning with GIS, Remote Sensing, Spatial Analytics, and urban data science. My goal is to create sustainable, resilient, and data-driven solutions for cities."
       };
     }
 
-    if (q.includes("gis") || q.includes("mapping") || q.includes("arcgis") || q.includes("qgis")) {
+    if (q.includes("education") || q.includes("university") || q.includes("gpa")) {
       return {
-        text: "I have extensive experience in Geographic Information Systems (GIS) using **ArcGIS Pro, QGIS, and Google Earth Engine**.\n\n**Typical GIS applications in my work:**\n• Land-use analysis\• Site suitability assessment (using MCDM)\n• Pedestrian accessibility assessment\n• Spatial overlay & interpolation\n• Spatial database development\n\nI recommend looking at the **Pettah Urban Regeneration Project** or my **Night-Time Food Culture Research** for concrete examples."
-      };
-    }
-
-    if (q.includes("python") || q.includes("programming") || q.includes("sql") || q.includes("code")) {
-      return {
-        text: "I use Python, R, and SQL primarily for spatial data processing, urban informatics, and automation.\n\n**Notable application:**\nI developed a traffic monitoring system using Python, SQL, and the YOLO computer vision model to automate vehicle counting and flow analysis for transportation planning studies."
-      };
-    }
-
-    if (q.includes("drone") || q.includes("uav") || q.includes("surveying") || q.includes("lidar")) {
-      return {
-        text: "I have professional experience conducting UAV-based drone surveys and processing photogrammetry data at **Global GIS (Pvt) Ltd**.\n\n**Capabilities include:**\n• Orthomosaic generation\n• Digital Elevation Models (DEM) / DSM generation\n• Contour map production\n• LiDAR data processing\n\nProjects include the Madampitiya Waste Survey, Aaviyana Chalet site map, and the Norochcholai infrastructure survey."
-      };
-    }
-
-    if (q.includes("pettah") || q.includes("regeneration") || q.includes("old town")) {
-      return {
-        text: "The **Pettah Urban Regeneration Project** was a heritage-led design study for the Old Town Hall and Market Precinct in Colombo. I served as Project Lead & GIS Analyst.\n\n**Key Actions:**\n• Performed pedestrian accessibility & morphology analysis using QGIS.\n• Drafted conceptual masterplans and 3D street sections in AutoCAD & SketchUp.\n• Proposed adaptive reuse for the historic markets to boost the informal economy."
-      };
-    }
-
-    if (q.includes("research") || q.includes("food culture") || q.includes("night-time")) {
-      return {
-        text: "My undergraduate research is titled **'Night-Time Food Culture Development and Its Implications for Urban Planning'** within the Colombo Municipal Council.\n\n**Methodology & Models:**\n• Mixed-methods: Primary surveys (households & businesses) and interviews.\n• Spatial statistics: Geographically Weighted Regression (GWR), Logistic Regression, and Spatial Coupling Coordination Model (SCCM).\n• Found that night-time activity clusters are strongly coordinated with spatial accessibility, driving local economic vitality."
+        text: "🎓 **Education Profile**:\n\n• **Degree**: Bachelor of Science (Honours) in Urban Informatics and Planning\n• **Institution**: University of Moratuwa\n• **Duration**: April 2022 – May 2026\n• **CGPA**: 3.81 / 4.20 (First Class Standing)\n• **Achievements**: Dean's List recipient in 5 semesters (L1S1, L1S2, L2S3, L3S5, L4S7)"
       };
     }
 
@@ -206,7 +341,6 @@ export default function AIAssistant() {
       };
     }
 
-    // Default response
     return {
       text: "I don't currently have specific details about that in my portfolio records. However, I can help you explore my:\n\n• **GIS & Remote Sensing projects**\n• **Undergraduate Research**\n• **Professional Timeline**\n• **Core Skills**\n\nWould you like me to guide you to one of these?",
       isWidget: true,
@@ -426,15 +560,39 @@ export default function AIAssistant() {
                       {/* Render custom widgets */}
                       {msg.isWidget && msg.widgetType === "nav_suggestions" && (
                         <div className="mt-4 pt-3 border-t border-border-custom/50 flex flex-col gap-2">
-                          <p className="text-[10px] text-text-muted uppercase tracking-wider font-semibold">Suggested Prompts</p>
-                          <div className="flex flex-wrap gap-1.5">
-                            <button onClick={() => handleSendMessage("Tell me about your GIS experience")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">🗺️ GIS Experience</button>
-                            <button onClick={() => handleSendMessage("Explain your Night-time Food Research")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">📚 Food Research</button>
-                            <button onClick={() => handleSendMessage("Show Pettah Regeneration Project")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">🏙️ Pettah Project</button>
-                            <button onClick={() => handleSendMessage("Show professional timeline")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">💼 Experience Timeline</button>
-                            <button onClick={() => triggerAction("download_cv")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">📄 Download CV</button>
-                            <button onClick={() => triggerAction("scroll_contact")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">📞 Contact Details</button>
-                          </div>
+                          {msg.widgetData && msg.widgetData.reportUrl ? (
+                            <>
+                              <p className="text-[10px] text-text-muted uppercase tracking-wider font-semibold">Project Actions</p>
+                              <div className="flex flex-wrap gap-1.5">
+                                <button 
+                                  onClick={() => window.open(msg.widgetData.reportUrl.startsWith('/') ? `/urban-portfolio${msg.widgetData.reportUrl}` : msg.widgetData.reportUrl, "_blank")} 
+                                  className="text-[11px] bg-secondary text-white font-semibold px-2.5 py-1.5 rounded-md hover:bg-secondary/90 transition-all cursor-pointer flex items-center gap-1"
+                                >
+                                  📄 Open Report
+                                </button>
+                                <button 
+                                  onClick={() => {
+                                    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+                                  }} 
+                                  className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer"
+                                >
+                                  🏙️ View in Projects Grid
+                                </button>
+                              </div>
+                            </>
+                          ) : (
+                            <>
+                              <p className="text-[10px] text-text-muted uppercase tracking-wider font-semibold">Suggested Prompts</p>
+                              <div className="flex flex-wrap gap-1.5">
+                                <button onClick={() => handleSendMessage("Tell me about your GIS experience")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">🗺️ GIS Experience</button>
+                                <button onClick={() => handleSendMessage("Explain your Night-time Food Research")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">📚 Food Research</button>
+                                <button onClick={() => handleSendMessage("Show Pettah Regeneration Project")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">🏙️ Pettah Project</button>
+                                <button onClick={() => handleSendMessage("Show professional timeline")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">💼 Experience Timeline</button>
+                                <button onClick={() => triggerAction("download_cv")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">📄 Download CV</button>
+                                <button onClick={() => triggerAction("scroll_contact")} className="text-[11px] bg-bg-card border border-border-custom hover:border-secondary px-2.5 py-1.5 rounded-md text-text-base transition-all cursor-pointer">📞 Contact Details</button>
+                              </div>
+                            </>
+                          )}
                         </div>
                       )}
 
