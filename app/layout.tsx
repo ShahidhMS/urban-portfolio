@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./context/ThemeContext";
 import portfolioData from "../data/portfolioData.json";
 import Script from "next/script";
+import AIAssistant from "./components/AIAssistant";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -74,6 +75,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-bg-base text-text-base transition-colors duration-300 font-sans">
         <ThemeProvider>
           {children}
+          <AIAssistant />
         </ThemeProvider>
       </body>
     </html>
