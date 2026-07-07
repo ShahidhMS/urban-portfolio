@@ -161,7 +161,10 @@
       "imageUrl": "/projects/pettah_heritage_cover.jpg",
       "panelLink": "/projects/pettah_heritage_panel.jpg",
       "galleryLinks": [
-        { "id": 7, "label": "Pettah Project Gallery" }
+        {
+          "id": 7,
+          "label": "Pettah Project Gallery"
+        }
       ]
     },
     {
@@ -229,37 +232,46 @@
       "imageUrl": "/projects/nuwara_eliya_heritage_cover.png"
     },
     {
-      "id": "groundwater-recharge-potential",
-      "title": "Groundwater Recharge Potential Analysis",
-      "category": "Remote Sensing",
-      "description": "Evaluated and mapped groundwater recharge potential zones in the Kurunegala District, Sri Lanka, to support sustainable water resource management. The analysis utilizes a Multi-Criteria Decision Analysis (MCDA) framework, integrating Landsat 8 satellite classification, soil hydrology groups, composite Curve Numbers (CN), and topographic slope/elevation parameters.",
+      "id": "drone-lidar-survey",
+      "title": "UAV-Based Waste Dump Site Mapping and Volumetric Analysis",
+      "category": "GIS & Surveying",
+      "description": "This project involved processing and analyzing UAV (drone) survey data collected from the Madampitiya Waste Disposal Site to support terrain assessment, waste volume estimation, and spatial monitoring. Waste disposal facilities require accurate and up-to-date information on surface conditions, waste accumulation, and available capacity to support operational planning and environmental management. Traditional survey methods can be time-consuming and resource-intensive, making UAV-based surveying a more efficient solution.\n\nThe project utilized high-resolution drone imagery and georeferenced survey data to develop detailed three-dimensional representations of the site. A photogrammetric workflow was applied to generate dense point clouds, orthomosaics, Digital Surface Models (DSM), and Digital Elevation Models (DEM). Terrain features were extracted and classified to improve surface interpretation, while breaklines, contours, and cross-sections were generated for detailed topographic analysis. Volumetric calculations were then performed to estimate waste accumulation and assess storage capacity within the site.\n\nThis project provided practical experience in drone surveying, photogrammetry, terrain modeling, geospatial analysis, and volumetric assessment using industry-standard software and real-world datasets obtained through the R&D Division of Global GIS (Pvt) Ltd.",
       "tools": [
-        "ArcMap",
-        "Landsat 8 OLI",
-        "SCS Hydrological Modeling",
-        "Topographic Analysis"
+        "3Dsurvey",
+        "Pix4Dmapper",
+        "ArcGIS Pro",
+        "QGIS",
+        "AutoCAD Civil 3D",
+        "GNSS Survey Equipment",
+        "UAV/Drone Survey Data",
+        "Photogrammetric Processing Techniques",
+        "Point Cloud Analysis"
       ],
       "outcomes": [
-        "Identified groundwater replenishment zones ranging from 'Very High' (steeped in dense vegetation) to 'Very Low' suitability.",
-        "Performed Landsat 8 LULC classification mapping agricultural, built-up, and water bodies.",
-        "Modelled weighted composite Curve Numbers (CN) to estimate surface runoff rates.",
-        "Provided recommendations directly targeting infiltration pits and vegetation preservation."
+        "Generated high-density georeferenced point clouds and orthomosaic imagery for detailed site visualization and analysis.",
+        "Developed Digital Elevation Models (DEM) and Digital Surface Models (DSM) to accurately represent terrain conditions and waste accumulation patterns.",
+        "Produced contours, breaklines, and cross-sectional profiles for topographic assessment and engineering applications.",
+        "Performed volumetric calculations to estimate waste dump capacity and support operational monitoring of the disposal site.",
+        "Created GIS-ready datasets and 3D terrain models that improved understanding of site morphology and spatial characteristics."
       ],
       "githubLink": "",
-      "reportLink": "/projects/groundwater-recharge-report.pdf",
+      "reportLink": "",
       "location": {
-        "name": "Kurunegala, Sri Lanka",
-        "lat": 7.4863,
-        "lng": 80.3647
+        "name": "Madampitiya Waste Disposal Site, Colombo, Sri Lanka",
+        "lat": 6.95,
+        "lng": 79.875
       },
       "stats": {
-        "areaMapped": "4,816 km²",
-        "timeRange": "2022 Analysis",
-        "datasets": "Landsat 8, Soil Maps, SRTM DEM"
+        "areaMapped": "UAV survey coverage of an active waste disposal facility",
+        "timeRange": "2024 Internship Project",
+        "datasets": "UAV/Drone Aerial Imagery, GNSS Ground Control Data, Dense Point Cloud Data, Orthomosaic Imagery, DSM, DEM, Derived Contours and Breaklines"
       },
-      "imageUrl": "/projects/groundwater_recharge_cover.jpg",
+      "imageUrl": "/projects/waste_mapping_1.jpg",
       "galleryLinks": [
-        { "id": 8, "label": "Groundwater Analysis Maps" }
+        {
+          "id": 14,
+          "label": "UAV Waste Dump Mapping Gallery"
+        }
       ]
     },
     {
@@ -300,7 +312,10 @@
       },
       "imageUrl": "/projects/human_elephant_conflict_cover.png",
       "galleryLinks": [
-        { "id": 9, "label": "HEC Map Gallery" }
+        {
+          "id": 9,
+          "label": "HEC Map Gallery"
+        }
       ]
     },
     {
@@ -368,45 +383,11 @@
       },
       "imageUrl": "/projects/trinco_model_19.png",
       "galleryLinks": [
-        { "id": 13, "label": "Trincomalee Project Gallery" }
+        {
+          "id": 13,
+          "label": "Trincomalee Project Gallery"
+        }
       ]
-    },
-    {
-      "id": "drone-lidar-survey",
-      "title": "UAV-Based Waste Dump Site Mapping and Volumetric Analysis",
-      "category": "GIS & Surveying",
-      "description": "This project involved processing and analyzing UAV (drone) survey data collected from the Madampitiya Waste Disposal Site to support terrain assessment, waste volume estimation, and spatial monitoring. Waste disposal facilities require accurate and up-to-date information on surface conditions, waste accumulation, and available capacity to support operational planning and environmental management. Traditional survey methods can be time-consuming and resource-intensive, making UAV-based surveying a more efficient solution.\n\nThe project utilized high-resolution drone imagery and georeferenced survey data to develop detailed three-dimensional representations of the site. A photogrammetric workflow was applied to generate dense point clouds, orthomosaics, Digital Surface Models (DSM), and Digital Elevation Models (DEM). Terrain features were extracted and classified to improve surface interpretation, while breaklines, contours, and cross-sections were generated for detailed topographic analysis. Volumetric calculations were then performed to estimate waste accumulation and assess storage capacity within the site.\n\nThis project provided practical experience in drone surveying, photogrammetry, terrain modeling, geospatial analysis, and volumetric assessment using industry-standard software and real-world datasets obtained through the R&D Division of Global GIS (Pvt) Ltd.",
-      "tools": [
-        "3Dsurvey",
-        "Pix4Dmapper",
-        "ArcGIS Pro",
-        "QGIS",
-        "AutoCAD Civil 3D",
-        "GNSS Survey Equipment",
-        "UAV/Drone Survey Data",
-        "Photogrammetric Processing Techniques",
-        "Point Cloud Analysis"
-      ],
-      "outcomes": [
-        "Generated high-density georeferenced point clouds and orthomosaic imagery for detailed site visualization and analysis.",
-        "Developed Digital Elevation Models (DEM) and Digital Surface Models (DSM) to accurately represent terrain conditions and waste accumulation patterns.",
-        "Produced contours, breaklines, and cross-sectional profiles for topographic assessment and engineering applications.",
-        "Performed volumetric calculations to estimate waste dump capacity and support operational monitoring of the disposal site.",
-        "Created GIS-ready datasets and 3D terrain models that improved understanding of site morphology and spatial characteristics."
-      ],
-      "githubLink": "",
-      "reportLink": "",
-      "location": {
-        "name": "Madampitiya Waste Disposal Site, Colombo, Sri Lanka",
-        "lat": 6.9500,
-        "lng": 79.8750
-      },
-      "stats": {
-        "areaMapped": "UAV survey coverage of an active waste disposal facility",
-        "timeRange": "2024 Internship Project",
-        "datasets": "UAV/Drone Aerial Imagery, GNSS Ground Control Data, Dense Point Cloud Data, Orthomosaic Imagery, DSM, DEM, Derived Contours and Breaklines"
-      },
-      "imageUrl": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "badulupitiya-residential-planning",
@@ -447,7 +428,47 @@
       },
       "imageUrl": "/projects/badulupitiya_regeneration_cover.jpg",
       "galleryLinks": [
-        { "id": 10, "label": "Badulupitiya Project Gallery" }
+        {
+          "id": 10,
+          "label": "Badulupitiya Project Gallery"
+        }
+      ]
+    },
+    {
+      "id": "groundwater-recharge-potential",
+      "title": "Groundwater Recharge Potential Analysis",
+      "category": "Remote Sensing",
+      "description": "Evaluated and mapped groundwater recharge potential zones in the Kurunegala District, Sri Lanka, to support sustainable water resource management. The analysis utilizes a Multi-Criteria Decision Analysis (MCDA) framework, integrating Landsat 8 satellite classification, soil hydrology groups, composite Curve Numbers (CN), and topographic slope/elevation parameters.",
+      "tools": [
+        "ArcMap",
+        "Landsat 8 OLI",
+        "SCS Hydrological Modeling",
+        "Topographic Analysis"
+      ],
+      "outcomes": [
+        "Identified groundwater replenishment zones ranging from 'Very High' (steeped in dense vegetation) to 'Very Low' suitability.",
+        "Performed Landsat 8 LULC classification mapping agricultural, built-up, and water bodies.",
+        "Modelled weighted composite Curve Numbers (CN) to estimate surface runoff rates.",
+        "Provided recommendations directly targeting infiltration pits and vegetation preservation."
+      ],
+      "githubLink": "",
+      "reportLink": "/projects/groundwater-recharge-report.pdf",
+      "location": {
+        "name": "Kurunegala, Sri Lanka",
+        "lat": 7.4863,
+        "lng": 80.3647
+      },
+      "stats": {
+        "areaMapped": "4,816 km²",
+        "timeRange": "2022 Analysis",
+        "datasets": "Landsat 8, Soil Maps, SRTM DEM"
+      },
+      "imageUrl": "/projects/groundwater_recharge_cover.jpg",
+      "galleryLinks": [
+        {
+          "id": 8,
+          "label": "Groundwater Analysis Maps"
+        }
       ]
     },
     {
@@ -484,8 +505,14 @@
       },
       "imageUrl": "/projects/bogambara_en1.png",
       "galleryLinks": [
-        { "id": 11, "label": "Heritage Redevelopment Gallery" },
-        { "id": 12, "label": "Urban Park Gallery" }
+        {
+          "id": 11,
+          "label": "Heritage Redevelopment Gallery"
+        },
+        {
+          "id": 12,
+          "label": "Urban Park Gallery"
+        }
       ]
     }
   ],
@@ -667,6 +694,30 @@
         "/projects/trinco_model_17.png",
         "/projects/trinco_model_18.png",
         "/projects/trinco_model_19.png"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "UAV-Based Waste Dump Site Mapping and Volumetric Analysis",
+      "category": "GIS & Surveying Album",
+      "imageUrl": "/projects/waste_mapping_1.jpg",
+      "description": "High-resolution orthomosaics, 3D terrain models, contours, and volumetric analysis diagrams generated from UAV photogrammetric surveys.",
+      "type": "Map",
+      "mediaGroup": [
+        "/projects/ramba_vihara_layout.jpg",
+        "/projects/aviyana_case_study_1.jpg",
+        "/projects/aviyana_case_study_2.jpg",
+        "/projects/aviyana_case_study_3.jpg",
+        "/projects/aviyana_case_study_4.jpg",
+        "/projects/aviyana_case_study_5.jpg",
+        "/projects/waste_mapping_1.jpg",
+        "/projects/waste_mapping_2.jpg",
+        "/projects/waste_mapping_3.jpg",
+        "/projects/waste_mapping_4.jpg",
+        "/projects/waste_mapping_5.jpg",
+        "/projects/waste_mapping_6.jpg",
+        "/projects/waste_mapping_7.jpg",
+        "/projects/waste_mapping_8.jpg"
       ]
     }
   ],
