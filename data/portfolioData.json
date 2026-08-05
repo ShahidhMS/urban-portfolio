@@ -816,6 +816,19 @@
         ]
       },
       {
+        "role": "Freelance GIS Analyst",
+        "organization": "International GIS Consultancy Project – Australia",
+        "period": "July 2026",
+        "description": [
+          "Delivered a GIS consultancy project for renewable energy planning by identifying suitable locations for solar PV and wind farm development using geospatial analysis.",
+          "Developed a GIS-based Multi-Criteria Decision Analysis (MCDA) model in QGIS, integrating environmental, infrastructure, and renewable energy datasets.",
+          "Applied advanced raster-based geoprocessing techniques, including rasterization, reclassification, raster calculations, and weighted overlay analysis, to evaluate land suitability.",
+          "Analyzed spatial criteria such as road accessibility, hydrological networks, protected areas, solar resource potential, and wind speed to support site selection.",
+          "Produced suitability maps and GIS datasets that enabled data-driven decision-making for renewable energy infrastructure planning.",
+          "**Tools**: QGIS | Spatial Analysis | MCDA | Raster Analysis | Weighted Overlay | Cartography | Renewable Energy Planning"
+        ]
+      },
+      {
         "role": "Freelance Designer",
         "organization": "Urban Development & Design Project",
         "period": "Jan 2023 - Present",
