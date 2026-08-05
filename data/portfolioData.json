@@ -825,7 +825,7 @@
           "Applied advanced raster-based geoprocessing techniques, including rasterization, reclassification, raster calculations, and weighted overlay analysis, to evaluate land suitability.",
           "Analyzed spatial criteria such as road accessibility, hydrological networks, protected areas, solar resource potential, and wind speed to support site selection.",
           "Produced suitability maps and GIS datasets that enabled data-driven decision-making for renewable energy infrastructure planning.",
-          "**Tools**: QGIS | Spatial Analysis | MCDA | Raster Analysis | Weighted Overlay | Cartography | Renewable Energy Planning"
+          "Tools: QGIS | Spatial Analysis | MCDA | Raster Analysis | Weighted Overlay | Cartography | Renewable Energy Planning"
         ]
       },
       {
