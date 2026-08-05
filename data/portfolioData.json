@@ -353,6 +353,41 @@
       "customLinkLabel": "LinkedIn Post"
     },
     {
+      "id": "renewable-energy-suitability",
+      "title": "Renewable Energy Site Suitability Analysis for Solar and Wind Farm Development",
+      "category": "GIS & Spatial Analytics",
+      "description": "Conducted a freelance GIS consultancy project for a client in Australia to identify suitable locations for solar photovoltaic (PV) and wind energy developments. The project involved applying GIS-based Multi-Criteria Suitability Analysis to evaluate spatial, environmental, and infrastructure-related factors affecting renewable energy site selection.\n\nUsing QGIS, multiple geospatial datasets were processed through raster-based spatial analysis techniques, including rasterization, reclassification, weighted overlay analysis, and raster calculations, to generate suitability maps that support evidence-based renewable energy planning and investment decisions.\n\n**Role**: Freelance GIS Analyst (Responsible for workflow design, preprocessing, raster analysis, weighted overlay modelling, and map production.)",
+      "tools": [
+        "QGIS",
+        "Raster Calculator",
+        "Raster Reclassification",
+        "Rasterization",
+        "Weighted Overlay Analysis",
+        "Spatial Analysis Tools",
+        "Multi-Criteria Decision Analysis (MCDA)"
+      ],
+      "outcomes": [
+        "Developed GIS-based suitability models for solar energy development.",
+        "Identified suitable locations for wind farm development.",
+        "Produced weighted suitability maps for renewable energy planning.",
+        "Delivered GIS layers and analytical outputs to the client for decision-making.",
+        "Applied reproducible GIS workflows for spatial decision support."
+      ],
+      "githubLink": "",
+      "reportLink": "",
+      "location": {
+        "name": "Australia (Regional scale)",
+        "lat": -25.2744,
+        "lng": 133.7751
+      },
+      "stats": {
+        "areaMapped": "Regional-scale assessment (Australia)",
+        "timeRange": "July 2026",
+        "datasets": "Road Network, River Network, Protected Areas, Solar Radiation Data, Wind Speed Data, Environmental Constraints, Administrative Boundaries"
+      },
+      "imageUrl": "/projects/solar_wind_suitability.jpg"
+    },
+    {
       "id": "trincomalee-local-plan",
       "title": "Trincomalee Local Development Plan",
       "category": "Local Area Planning",
@@ -386,6 +421,43 @@
         {
           "id": 13,
           "label": "Trincomalee Project Gallery"
+        }
+      ]
+    },
+    {
+      "id": "groundwater-recharge-potential",
+      "title": "Groundwater Recharge Potential Analysis",
+      "category": "Remote Sensing",
+      "description": "Evaluated and mapped groundwater recharge potential zones in the Kurunegala District, Sri Lanka, to support sustainable water resource management. The analysis utilizes a Multi-Criteria Decision Analysis (MCDA) framework, integrating Landsat 8 satellite classification, soil hydrology groups, composite Curve Numbers (CN), and topographic slope/elevation parameters.",
+      "tools": [
+        "ArcMap",
+        "Landsat 8 OLI",
+        "SCS Hydrological Modeling",
+        "Topographic Analysis"
+      ],
+      "outcomes": [
+        "Identified groundwater replenishment zones ranging from 'Very High' (steeped in dense vegetation) to 'Very Low' suitability.",
+        "Performed Landsat 8 LULC classification mapping agricultural, built-up, and water bodies.",
+        "Modelled weighted composite Curve Numbers (CN) to estimate surface runoff rates.",
+        "Provided recommendations directly targeting infiltration pits and vegetation preservation."
+      ],
+      "githubLink": "",
+      "reportLink": "/projects/groundwater-recharge-report.pdf",
+      "location": {
+        "name": "Kurunegala, Sri Lanka",
+        "lat": 7.4863,
+        "lng": 80.3647
+      },
+      "stats": {
+        "areaMapped": "4,816 km²",
+        "timeRange": "2022 Analysis",
+        "datasets": "Landsat 8, Soil Maps, SRTM DEM"
+      },
+      "imageUrl": "/projects/groundwater_recharge_cover.jpg",
+      "galleryLinks": [
+        {
+          "id": 8,
+          "label": "Groundwater Analysis Maps"
         }
       ]
     },
@@ -431,43 +503,6 @@
         {
           "id": 10,
           "label": "Badulupitiya Project Gallery"
-        }
-      ]
-    },
-    {
-      "id": "groundwater-recharge-potential",
-      "title": "Groundwater Recharge Potential Analysis",
-      "category": "Remote Sensing",
-      "description": "Evaluated and mapped groundwater recharge potential zones in the Kurunegala District, Sri Lanka, to support sustainable water resource management. The analysis utilizes a Multi-Criteria Decision Analysis (MCDA) framework, integrating Landsat 8 satellite classification, soil hydrology groups, composite Curve Numbers (CN), and topographic slope/elevation parameters.",
-      "tools": [
-        "ArcMap",
-        "Landsat 8 OLI",
-        "SCS Hydrological Modeling",
-        "Topographic Analysis"
-      ],
-      "outcomes": [
-        "Identified groundwater replenishment zones ranging from 'Very High' (steeped in dense vegetation) to 'Very Low' suitability.",
-        "Performed Landsat 8 LULC classification mapping agricultural, built-up, and water bodies.",
-        "Modelled weighted composite Curve Numbers (CN) to estimate surface runoff rates.",
-        "Provided recommendations directly targeting infiltration pits and vegetation preservation."
-      ],
-      "githubLink": "",
-      "reportLink": "/projects/groundwater-recharge-report.pdf",
-      "location": {
-        "name": "Kurunegala, Sri Lanka",
-        "lat": 7.4863,
-        "lng": 80.3647
-      },
-      "stats": {
-        "areaMapped": "4,816 km²",
-        "timeRange": "2022 Analysis",
-        "datasets": "Landsat 8, Soil Maps, SRTM DEM"
-      },
-      "imageUrl": "/projects/groundwater_recharge_cover.jpg",
-      "galleryLinks": [
-        {
-          "id": 8,
-          "label": "Groundwater Analysis Maps"
         }
       ]
     },
