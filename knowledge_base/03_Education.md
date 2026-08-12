@@ -264,7 +264,7 @@ What was your GPA?
 
 Answer:
 
-I graduated with a CGPA of 3.83 out of 4.20 while maintaining First Class Honours.
+I graduated with a GPA of 3.83 out of 4.20 while maintaining First Class Honours.
 
 --------------------------------------------------
 

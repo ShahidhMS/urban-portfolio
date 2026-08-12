@@ -110,7 +110,7 @@ export default function About() {
                 {profile.academicBackground}
               </p>
               <div className="flex items-center justify-between border-t border-border-custom pt-4 font-mono text-xs">
-                <span className="text-text-muted">Cumulative GPA:</span>
+                <span className="text-text-muted">Overall GPA:</span>
                 <span className="text-primary font-bold">{portfolioData.resume.education[0]?.gpa}</span>
               </div>
             </div>
