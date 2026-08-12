@@ -10,10 +10,10 @@ Duration:
 April 2022 – May 2026
 
 CGPA:
-3.81 / 4.20
+3.83 / 4.20
 
 Academic Standing:
-First Class Standing
+First Class Honours
 
 --------------------------------------------------
 
@@ -138,9 +138,9 @@ Spatial Coupling Coordination Model (SCCM)
 ## Academic Achievements
 
 CGPA:
-3.81 / 4.20
+3.83 / 4.20
 
-Maintained First Class Standing throughout the degree programme.
+Maintained First Class Honours throughout the degree programme.
 
 Dean's List Recipient
 
@@ -264,7 +264,7 @@ What was your GPA?
 
 Answer:
 
-I graduated with a CGPA of 3.81 out of 4.20 while maintaining First Class Standing.
+I graduated with a CGPA of 3.83 out of 4.20 while maintaining First Class Honours.
 
 --------------------------------------------------
 

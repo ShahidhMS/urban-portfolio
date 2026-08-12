@@ -66,7 +66,7 @@ What was your GPA?
 
 Answer
 
-I graduated with a CGPA of 3.81 while maintaining First Class standing.
+I graduated with a CGPA of 3.83 while maintaining First Class Honours.
 
 --------------------------------------------------
 

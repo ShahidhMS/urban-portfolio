@@ -165,7 +165,7 @@ export default function AIAssistant() {
     // 2. Education / GPA / Studies
     if (q.includes("education") || q.includes("university") || q.includes("gpa") || q.includes("degree") || q.includes("studied") || q.includes("academic") || q.includes("moratuwa")) {
       return {
-        text: "🎓 **Academic Background**:\n\n• **Degree**: Bachelor of Science (Honours) in Urban Informatics and Planning\n• **Institution**: University of Moratuwa\n• **Duration**: April 2022 – May 2026\n• **CGPA**: 3.81 / 4.20 (First Class Standing)\n• **Achievements**: Dean's List recipient in 5 semesters (L1S1, L1S2, L2S3, L3S5, L4S7)\n\nMy studies integrated traditional urban planning with GIS, Remote Sensing, spatial statistics, and data science."
+        text: "🎓 **Academic Background**:\n\n• **Degree**: Bachelor of Science (Honours) in Urban Informatics and Planning\n• **Institution**: University of Moratuwa\n• **Duration**: April 2022 – May 2026\n• **CGPA**: 3.83 / 4.20 (First Class Honours)\n• **Achievements**: Dean's List recipient in 6 semesters (L1S1, L1S2, L2S3, L3S5, L4S7, L4S8)\n\nMy studies integrated traditional urban planning with GIS, Remote Sensing, spatial statistics, and data science."
       };
     }
 
@@ -381,7 +381,7 @@ export default function AIAssistant() {
 
     if (q.includes("education") || q.includes("university") || q.includes("gpa")) {
       return {
-        text: "🎓 **Education Profile**:\n\n• **Degree**: Bachelor of Science (Honours) in Urban Informatics and Planning\n• **Institution**: University of Moratuwa\n• **Duration**: April 2022 – May 2026\n• **CGPA**: 3.81 / 4.20 (First Class Standing)\n• **Achievements**: Dean's List recipient in 5 semesters (L1S1, L1S2, L2S3, L3S5, L4S7)"
+        text: "🎓 **Education Profile**:\n\n• **Degree**: Bachelor of Science (Honours) in Urban Informatics and Planning\n• **Institution**: University of Moratuwa\n• **Duration**: April 2022 – May 2026\n• **CGPA**: 3.83 / 4.20 (First Class Honours)\n• **Achievements**: Dean's List recipient in 6 semesters (L1S1, L1S2, L2S3, L3S5, L4S7, L4S8)"
       };
     }
 
